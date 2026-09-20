@@ -1,0 +1,13 @@
+# 农产品场景图制作简报
+
+用途：README 的其他品类改造方向配图。不得把概念场景包装成已经支持的商品模块或真实产品截图。
+
+计划使用 imagegen CLI / gpt-image-2，1536 × 1024，high。2026-09-21 首次请求因现有 API 认证返回 401，尚未取得生成产物；不应在 README 添加缺失图片引用。
+
+## 鸡蛋场景
+
+Use case: ads-marketing. Asset: premium editorial illustration for a Chinese farm-to-friends self-service ordering project's GitHub README. Create a beautiful wide watercolor and gouache scene of freshly collected farm eggs: pale cream and warm brown eggs nestled in a shallow handmade bamboo basket with straw on a weathered wooden farmhouse table, a folded unbleached linen cloth, tiny herb sprigs. Beyond the table, softly suggested Jiangnan countryside courtyard with one healthy free-range brown hen, low plaster wall and green trees, no people. Hand-painted naturalistic watercolor, fine brush detail on foreground eggs and basket, delicate atmospheric wash in background, warm ivory paper grain, forest-green shadows and restrained terracotta accents, soft early morning window light. Composition is carefully balanced, basket at lower center with enough breathing room above, strong product clarity. Feels artisanal, credible, calm and contemporary, like a luxury seasonal food magazine, not a cartoon, not corporate stock art. No text, lettering, logos, labels, watermark, QR codes, phone screens or user interface. Do not depict existing software support; this is a conceptual agricultural sales scenario.
+
+## 禽鱼场景
+
+Use case: ads-marketing. Asset: companion premium editorial illustration for a Chinese farm-to-friends self-service ordering project's GitHub README. Wide watercolor and gouache scene at a small Jiangnan family farm fishpond: in foreground a shallow bamboo tray holding two fresh whole silver freshwater fish laid neatly on broad green leaves on a rustic wooden bench, clean natural food styling with no blood or cuts. To the right midground two healthy white ducks beside pond reeds, further back one brown chicken near a small farmhouse garden. Softly reflected willows and a modest whitewashed farmhouse across the pond. Hand-painted naturalistic watercolor, fine brush detail on fish scales and bamboo tray, soft atmospheric countryside background, warm ivory paper grain, forest-green shadows and restrained terracotta accents, gentle late morning sunlight. Composition visually matches an artisanal farm egg editorial illustration: hero produce in lower center, quiet landscape above, ample breathing space, calm sophisticated seasonal food magazine aesthetic. Realistic animal anatomy, no oversized animals. No text, lettering, logo, watermark, labels, QR codes, phone screens or UI. This is a concept of poultry and freshwater fish direct sales, not a claim of software features.
