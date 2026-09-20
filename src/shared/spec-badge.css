@@ -1,0 +1,9 @@
+.crab-spec { display: inline-flex; align-items: center; gap: 5px; vertical-align: middle; flex-shrink: 0; max-width: 100%; line-height: 1; }
+.crab-spec img {
+  display: block; object-fit: contain; max-width: none;
+}
+.crab-spec .crab-spec-illustration { width: 96px; height: 70px; }
+.crab-spec.crab-spec-compact .crab-spec-illustration { width: 80px; height: 58px; }
+.crab-spec .crab-spec-label { color: inherit; font-size: 14px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+.crab-spec.crab-spec-compact .crab-spec-label { font-size: 13px; }
+.crab-spec .crab-spec-fallback { color: inherit; font-size: 13px; line-height: 1.3; overflow-wrap: anywhere; }

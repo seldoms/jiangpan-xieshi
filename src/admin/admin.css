@@ -1,0 +1,69 @@
+/**
+ * 管理端自有样式（只服务于 src/admin/**）。
+ *
+ * ⚠️ 为什么不写进 src/design-system.css：那是多人共用的统一层，并行改动容易冲突。
+ * 加载顺序（Vite 里样式按 import 顺序生效，同特异性下后来者胜出）：
+ *   styles.css → src/admin/admin.css（本文件，经 ConfigPage 引入）→ design-system.css
+ * 所以本文件能压住 styles.css，但**压不住 design-system.css**：需要压它时必须提高
+ * 选择器特异性（见下面 .notice-form .field textarea，比统一层的 (0,2,1) 高一级）。
+ */
+
+/* ---------- 规格表格行内操作：改价 + 删除同排 ----------
+   两个按钮都是 .small-link（文字操作层，无底 + 主题色字），统一层给的是同一套高度
+   （PC 32px / 移动 44px），所以天然等高；这里只负责把它们排成一行并留出间距。 */
+.admin-layout .spec-row-actions{ display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+
+/* 删除沿用「文字操作」层，只换成危险色，不新增第四种按钮样式。
+   特异性 (0,4,0) 高于统一层的 .admin-layout .small-link:hover (0,2,1)，hover 也压得住。 */
+.admin-layout .spec-row-actions .small-link.is-danger{ color: #a4442c; }
+.admin-layout .spec-row-actions .small-link.is-danger:hover{ color: #8a3623; }
+
+/* ---------- 公告面板 ---------- */
+.admin-layout .notice-time-row{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+
+/* 统一层在 ≤760px 给「管理端表单 textarea」钉了 height:44px，会把手打的多行公告压成一行。
+   这条 (0,3,1) 高于它的 (0,2,1)，PC / 移动都恢复成可拖拽的多行框。 */
+.admin-layout .notice-form .field textarea{ height: auto; min-height: 104px; line-height: 1.7; resize: vertical; }
+.admin-layout .notice-form .helper{ margin: 0; }
+.admin-layout .notice-actions{ justify-content: flex-end; gap: 10px; margin-top: 2px; }
+
+@media (max-width: 640px) {
+.admin-layout .notice-time-row{ grid-template-columns: 1fr; }
+/* 移动端两个操作各占一半，都够拇指点（统一层已把按钮钉到 44px）。 */
+.admin-layout .notice-actions{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.admin-layout .notice-actions .button{ width: 100%; min-width: 0; }
+}
+
+/* 规格行状态区：启用/停用拨钮 + 缺货开关同行，垂直居中 */
+.spec-row-state{display:flex;align-items:center;gap:10px}
+.spec-row-state .small-link{white-space:nowrap}
+
+/* ---------- 满减优惠码面板 ---------- */
+/* 两个面板上下叠（活动配置 + 使用订单），与其它面板保持同一档间距。 */
+.admin-layout .coupon-stack{ display: grid; gap: 18px; }
+/* 门槛 / 减免 / 总张数 三个字段一行；窄屏折成一列。 */
+.admin-layout .coupon-grid{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.admin-layout .coupon-form .helper{ margin: 0; }
+.admin-layout .coupon-actions{ justify-content: flex-end; gap: 10px; margin-top: 2px; }
+/* 已取消（软删）的用券单：整行标危险色，一眼看出「这张用掉了但没退回名额」。 */
+.admin-layout .coupon-orders-table tr.is-cancelled td{ color: #a4442c; }
+
+@media (max-width: 640px) {
+.admin-layout .coupon-grid{ grid-template-columns: 1fr; }
+/* 移动端三个操作竖排满宽，都够拇指点（统一层已把按钮钉到 44px）。 */
+.admin-layout .coupon-actions{ display: grid; grid-template-columns: 1fr; }
+}
+
+/* 规格表标题行右侧操作组：重排 + 新增同行，中间留 8px；高度由统一层 .button 保证一致 */
+.admin-layout .spec-panel-actions{ display: flex; align-items: center; gap: 8px; }
+
+/* 发货卡片上的联系信息：整块可点，点一下复制「姓名 电话 地址」。
+   不用 height，多行自适应；被统一层的 button:not(...) 排除后才不会被钉成 32px。 */
+.admin-layout .contact-copy{ display: grid; gap: 1px; flex: 1; min-width: 0; height: auto; padding: 3px 5px; text-align: left; border: 0; border-radius: 3px; background: none; cursor: copy; }
+.admin-layout .contact-copy:hover{ background: #eef3ea; }
+.admin-layout .contact-copy:focus-visible{ outline: 2px solid #2e6550; outline-offset: 1px; }
+.admin-layout .contact-copy strong{ color: #244c40; font-size: 13px; font-weight: 700; }
+.admin-layout .contact-copy p{ margin: 0; color: #63727a; font-size: 12px; line-height: 1.45; overflow-wrap: anywhere; }
+.admin-layout .contact-copy .contact-phone{ color: #8a968f; font-variant-numeric: tabular-nums; }
+.admin-layout .contact-copy-hint{ flex: 0 0 auto; color: #8a968f; font-size: 11px; font-style: normal; }
+.admin-layout .contact-copy:hover ~ .contact-copy-hint{ color: #2e6550; }

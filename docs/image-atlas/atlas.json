@@ -1,0 +1,270 @@
+{
+  "size": 1024,
+  "sheets": {
+    "A": {
+      "filename": "atlas-a.png",
+      "assets": [
+        {
+          "id": "A01",
+          "name": "首页横幅",
+          "key": "banner",
+          "x": 16,
+          "y": 16,
+          "width": 992,
+          "height": 608,
+          "safeInset": 32
+        },
+        {
+          "id": "A02",
+          "name": "苏北蟹塘风光",
+          "key": "pond",
+          "x": 16,
+          "y": 640,
+          "width": 992,
+          "height": 368,
+          "safeInset": 32
+        }
+      ]
+    },
+    "B": {
+      "filename": "atlas-b.png",
+      "assets": [
+        {
+          "id": "B01",
+          "name": "活公蟹",
+          "key": "male",
+          "x": 16,
+          "y": 16,
+          "width": 488,
+          "height": 488,
+          "safeInset": 48
+        },
+        {
+          "id": "B02",
+          "name": "活母蟹",
+          "key": "female",
+          "x": 520,
+          "y": 16,
+          "width": 488,
+          "height": 488,
+          "safeInset": 48
+        },
+        {
+          "id": "B03",
+          "name": "公母双蟹套装",
+          "key": "pair",
+          "x": 16,
+          "y": 520,
+          "width": 488,
+          "height": 488,
+          "safeInset": 48
+        },
+        {
+          "id": "B04",
+          "name": "开启礼盒",
+          "key": "gift-open",
+          "x": 520,
+          "y": 520,
+          "width": 488,
+          "height": 488,
+          "safeInset": 48
+        }
+      ]
+    },
+    "C": {
+      "filename": "atlas-c.png",
+      "assets": [
+        {
+          "id": "C01",
+          "name": "蟹形品牌标志",
+          "key": "logo",
+          "x": 16,
+          "y": 16,
+          "width": 488,
+          "height": 488,
+          "safeInset": 96
+        },
+        {
+          "id": "C02",
+          "name": "普通运输包装",
+          "key": "package-plain",
+          "x": 520,
+          "y": 16,
+          "width": 488,
+          "height": 488,
+          "safeInset": 48
+        },
+        {
+          "id": "C03",
+          "name": "闭合礼盒",
+          "key": "gift-closed",
+          "x": 16,
+          "y": 520,
+          "width": 488,
+          "height": 488,
+          "safeInset": 48
+        },
+        {
+          "id": "C04",
+          "name": "向右图标",
+          "key": "arrow-right",
+          "x": 520,
+          "y": 520,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C05",
+          "name": "向左图标",
+          "key": "arrow-left",
+          "x": 648,
+          "y": 520,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C06",
+          "name": "增加图标",
+          "key": "plus",
+          "x": 776,
+          "y": 520,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C07",
+          "name": "减少图标",
+          "key": "minus",
+          "x": 904,
+          "y": 520,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C08",
+          "name": "购物袋图标",
+          "key": "bag",
+          "x": 520,
+          "y": 648,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C09",
+          "name": "确认图标",
+          "key": "check",
+          "x": 648,
+          "y": 648,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C10",
+          "name": "地址图标",
+          "key": "pin",
+          "x": 776,
+          "y": 648,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C11",
+          "name": "关闭图标",
+          "key": "close",
+          "x": 904,
+          "y": 648,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C12",
+          "name": "包装图标",
+          "key": "box",
+          "x": 520,
+          "y": 776,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C13",
+          "name": "产地图标",
+          "key": "leaf",
+          "x": 648,
+          "y": 776,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C14",
+          "name": "配送图标",
+          "key": "truck",
+          "x": 776,
+          "y": 776,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C15",
+          "name": "时间图标",
+          "key": "clock",
+          "x": 904,
+          "y": 776,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C16",
+          "name": "展开图标",
+          "key": "chevron-down",
+          "x": 520,
+          "y": 904,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C17",
+          "name": "编辑图标",
+          "key": "edit",
+          "x": 648,
+          "y": 904,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C18",
+          "name": "删除图标",
+          "key": "trash",
+          "x": 776,
+          "y": 904,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        },
+        {
+          "id": "C19",
+          "name": "搜索图标",
+          "key": "search",
+          "x": 904,
+          "y": 904,
+          "width": 104,
+          "height": 104,
+          "safeInset": 16
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "source": "docs/image-atlas/sources/1.png",
+  "sourceSize": {
+    "width": 1672,
+    "height": 941
+  },
+  "outputSize": {
+    "width": 128,
+    "height": 128
+  },
+  "maxSubjectSize": 96,
+  "assets": [
+    {
+      "id": "C04",
+      "name": "arrow-right",
+      "sourceRect": {
+        "x": 50,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/arrow-right.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 92,
+        "y": 672,
+        "width": 74,
+        "height": 55
+      }
+    },
+    {
+      "id": "C05",
+      "name": "arrow-left",
+      "sourceRect": {
+        "x": 259,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/arrow-left.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 305,
+        "y": 672,
+        "width": 73,
+        "height": 55
+      }
+    },
+    {
+      "id": "C06",
+      "name": "plus",
+      "sourceRect": {
+        "x": 464,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/plus.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 509,
+        "y": 666,
+        "width": 69,
+        "height": 68
+      }
+    },
+    {
+      "id": "C07",
+      "name": "minus",
+      "sourceRect": {
+        "x": 665,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/minus.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 709,
+        "y": 695,
+        "width": 75,
+        "height": 9
+      }
+    },
+    {
+      "id": "C08",
+      "name": "bag",
+      "sourceRect": {
+        "x": 869,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/bag.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 917,
+        "y": 665,
+        "width": 68,
+        "height": 73
+      }
+    },
+    {
+      "id": "C09",
+      "name": "check",
+      "sourceRect": {
+        "x": 1067,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/check.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 1113,
+        "y": 681,
+        "width": 66,
+        "height": 43
+      }
+    },
+    {
+      "id": "C10",
+      "name": "pin",
+      "sourceRect": {
+        "x": 1263,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/pin.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 1315,
+        "y": 663,
+        "width": 59,
+        "height": 76
+      }
+    },
+    {
+      "id": "C11",
+      "name": "close",
+      "sourceRect": {
+        "x": 1465,
+        "y": 642,
+        "width": 160,
+        "height": 112
+      },
+      "path": "public/assets/jiangdu-v1/icons/close.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 1518,
+        "y": 673,
+        "width": 53,
+        "height": 53
+      }
+    },
+    {
+      "id": "C12",
+      "name": "box",
+      "sourceRect": {
+        "x": 50,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "path": "public/assets/jiangdu-v1/icons/box.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 93,
+        "y": 785,
+        "width": 75,
+        "height": 79
+      }
+    },
+    {
+      "id": "C13",
+      "name": "leaf",
+      "sourceRect": {
+        "x": 259,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "path": "public/assets/jiangdu-v1/icons/leaf.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 295,
+        "y": 785,
+        "width": 78,
+        "height": 79
+      }
+    },
+    {
+      "id": "C14",
+      "name": "truck",
+      "sourceRect": {
+        "x": 464,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "path": "public/assets/jiangdu-v1/icons/truck.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 481,
+        "y": 791,
+        "width": 117,
+        "height": 71
+      }
+    },
+    {
+      "id": "C15",
+      "name": "clock",
+      "sourceRect": {
+        "x": 665,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "path": "public/assets/jiangdu-v1/icons/clock.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 704,
+        "y": 783,
+        "width": 85,
+        "height": 85
+      }
+    },
+    {
+      "id": "C17",
+      "name": "edit",
+      "sourceRect": {
+        "x": 1067,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "path": "public/assets/jiangdu-v1/icons/edit.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 1103,
+        "y": 787,
+        "width": 77,
+        "height": 78
+      }
+    },
+    {
+      "id": "C18",
+      "name": "trash",
+      "sourceRect": {
+        "x": 1263,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "path": "public/assets/jiangdu-v1/icons/trash.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 1307,
+        "y": 785,
+        "width": 75,
+        "height": 80
+      }
+    },
+    {
+      "id": "C19",
+      "name": "search",
+      "sourceRect": {
+        "x": 1465,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "path": "public/assets/jiangdu-v1/icons/search.png",
+      "outputSize": {
+        "width": 128,
+        "height": 128
+      },
+      "subjectSourceRect": {
+        "x": 1508,
+        "y": 785,
+        "width": 80,
+        "height": 80
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "id": "C16",
+      "name": "chevron-down",
+      "sourceRect": {
+        "x": 869,
+        "y": 760,
+        "width": 160,
+        "height": 136
+      },
+      "reason": "源图为向右下斜箭头，不是向下折角；拒绝用作展开/折叠图标。"
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+/* 大屏采用独立字号层级，不放大手机端或管理端。 */
+@media (min-width: 1024px) {
+.jd-storefront{ font-size: 16px; }
+.jd-header{ height: 72px; }
+.jd-brand strong{ font-size: 32px; }
+.jd-brand small{ font-size: 13px; letter-spacing: 2px; }
+.jd-storefront .jd-brand > .jd-image-slot{ width: 56px; height: 56px; }
+  /* 主导航负责带路，右侧账号操作保持轻量，避免四组文字抢同一层级。 */
+.jd-header nav{ gap: 36px; }
+.jd-header nav button{ font-size: 15px; font-weight: 600; letter-spacing: 1px; }
+.jd-header-account{ gap: 10px; }
+.jd-header-account .jd-my-orders{ min-height: 32px; gap: 6px; font-size: 13px; }
+.jd-header-account .jd-login-entry{ min-height: 32px; padding: 0 14px; font-size: 13px; }
+.jd-notice{ font-size: 14px; padding: 12px 18px; }
+.jd-kicker{ font-size: 14px; }
+.jd-link{ font-size: 16px; }
+.jd-checkout{ padding-top: 38px; }
+.jd-checkout-grid{ grid-template-columns: minmax(0, 1fr) 330px; gap: 42px; }
+.jd-steps{ font-size: 15px; }
+.jd-steps li > span{ width: 30px; height: 30px; }
+.jd-form-heading h1{ font-size: 46px; }
+.jd-form-heading p{ font-size: 16px; }
+.jd-selection-item p{ font-size: 14px; }
+.jd-selection-item h2{ font-size: 19px; }
+.jd-selection-item > div > span, .jd-quantity output{ font-size: 17px; }
+.jd-quantity button{ width: 44px; height: 46px; }
+.jd-packaging legend, .jd-summary h2{ font-size: 28px; }
+.jd-package-option strong{ font-size: 18px; }
+.jd-package-option small, .jd-package-option em, .jd-helper{ font-size: 14px; line-height: 1.8; }
+.jd-summary-items > div, .jd-summary-total > span, .jd-summary-count, .jd-summary-count > strong{ font-size: 15px; }
+.jd-summary-total strong{ font-size: 42px; }
+.jd-summary-note{ font-size: 14px; }
+.jd-checkout-bar > div > span{ font-size: 16px; }
+.jd-checkout-bar strong{ font-size: 34px; }
+.jd-checkout-bar small{ font-size: 14px; }
+.jd-address legend{ font-size: 24px; }
+.jd-address-fields label, .jd-add-address, .jd-remove{ font-size: 15px; }
+.jd-address-fields input{ height: 52px; font-size: 17px; }
+.jd-address-fields input::placeholder{ font-size: 15px; }
+.jd-bulk-heading > span, .jd-bulk-preview-head, .jd-bulk-preview-head span, .jd-bulk-row strong, .jd-bulk-row small, .jd-bulk-row em, .jd-manual-heading small{ font-size: 14px; }
+.jd-bulk-import textarea{ font-size: 16px; }
+.jd-bulk-parse, .jd-bulk-confirm{ min-height: 48px; font-size: 15px; }
+.jd-bulk-heading h2, .jd-manual-heading{ font-size: 28px; }
+.jd-orders-page{ max-width: 1000px; }
+.jd-order h2, .jd-empty h2{ font-size: 30px; }
+.jd-order-top, .jd-order-bottom small{ font-size: 14px; }
+.jd-order p, .jd-order-bottom, .jd-order-reorder, .jd-empty p, .jd-success p{ font-size: 16px; }
+.jd-order-bottom > strong{ font-size: 34px; }
+.jd-success .jd-success-note{ font-size: 14px; }
+.jd-login{ max-width: 1220px; padding-top: 36px; }
+.jd-login-layout{ min-height: 560px; }
+.jd-login-story, .jd-login-card{ padding: 48px; }
+.jd-login-story h2{ font-size: 52px; }
+.jd-login-topline > span, .jd-login-picture > span:last-child{ font-size: 14px; }
+.jd-login-heading h1{ font-size: 42px; }
+.jd-login-heading > p{ font-size: 17px; }
+.jd-login-form{ margin-top: 38px; }
+.jd-login-input input{ height: 60px; font-size: 20px; padding: 0 20px; }
+.jd-login-input input::placeholder{ font-size: 18px; }
+.jd-login-submit{ min-height: 60px; margin-top: 24px; font-size: 18px; }
+.jd-login-error, .jd-order-code-note{ font-size: 14px; }
+.jd-login-result h1{ font-size: 34px; }
+.jd-login-result > p{ font-size: 16px; }
+.jd-login-result > .jd-order-code-value{ font-size: 28px; }
+}
+
+/* 选购操作页最终布局：规则只保留一套，避免多轮覆盖把首屏高度推来推去。 */
+@media (min-width: 761px) {
+.jd-storefront:has(.jd-checkout) .jd-notice{ min-height: 32px; max-height: 32px; margin-top: 5px; padding: 5px 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout{ padding-top: 10px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-top{ height: 34px; margin-bottom: 8px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading{ margin-bottom: 8px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading h1{ margin: 4px 0; font-size: 27px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-items{ padding: 0 14px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item{ min-height: 48px; padding: 6px 0; gap: 8px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item h2{ font-size: 13px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item p{ display: none; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item > div > span{ margin-top: 2px; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-gender{ width: 28px; height: 28px; font-size: 15px; }
+.jd-storefront:has(.jd-checkout) .jd-quantity button{ width: 29px; height: 30px; }
+.jd-storefront:has(.jd-checkout) .jd-quantity output{ min-width: 22px; font-size: 12px; }
+.jd-storefront:has(.jd-checkout) .jd-summary{ top: 64px; padding: 14px 16px; }
+.jd-storefront:has(.jd-checkout) .jd-summary h2{ font-size: 20px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-items{ gap: 7px; margin-top: 10px; padding-bottom: 10px; }
+  .jd-storefront:has(.jd-checkout) .jd-summary-items > div,
+.jd-storefront:has(.jd-checkout) .jd-summary-count{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-count{ gap: 5px; padding: 10px 0; }
+.jd-storefront:has(.jd-checkout) .jd-summary-total{ margin-top: 9px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-total strong{ font-size: 26px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-note{ display: none; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar{ margin-top: 7px; padding: 7px 0 calc(7px + env(safe-area-inset-bottom)); }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar strong{ font-size: 22px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar > div > span{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar small{ font-size: 11px; }
+}
+
+@media (max-width: 760px) {
+.jd-storefront:has(.jd-checkout) .jd-checkout{ padding: 12px 16px 0; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-top{ margin-bottom: 10px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading{ margin-bottom: 10px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading h1{ margin: 5px 0; font-size: 27px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading p{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-items{ padding: 0 13px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item{ min-height: 54px; padding: 8px 0; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item h2{ font-size: 12px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item p{ display: none; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item > div > span{ margin-top: 3px; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-gender{ width: 28px; height: 28px; font-size: 15px; }
+.jd-storefront:has(.jd-checkout) .jd-quantity button{ width: 29px; height: 31px; }
+.jd-storefront:has(.jd-checkout) .jd-quantity output{ min-width: 21px; font-size: 12px; }
+.jd-storefront:has(.jd-checkout) .jd-summary{ position: static; margin-top: 10px; padding: 14px; }
+.jd-storefront:has(.jd-checkout) .jd-summary h2{ font-size: 19px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-items{ gap: 7px; margin-top: 10px; padding-bottom: 10px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-items > div{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-count{ padding: 10px 0; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-total{ margin-top: 9px; }
+.jd-storefront:has(.jd-checkout) .jd-summary-total strong{ font-size: 25px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar{ margin-top: 9px; padding-top: 9px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar strong{ font-size: 21px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-import textarea{ min-height: 86px; }
+}
+
+@media (max-width: 520px) {
+.jd-storefront:has(.jd-checkout) .jd-notice{ margin: 8px 12px 0; padding: 8px 9px; font-size: 11px; line-height: 1.55; }
+.jd-storefront:has(.jd-checkout) .jd-checkout{ padding-left: 16px; padding-right: 16px; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item{ min-height: 49px; padding: 6px 0; }
+.jd-storefront:has(.jd-checkout) .jd-selection-item h2{ font-size: 12px; }
+.jd-storefront:has(.jd-checkout) .jd-quantity button{ width: 29px; height: 30px; }
+.jd-storefront:has(.jd-checkout) .jd-summary{ padding: 12px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar{ margin-left: -16px; margin-right: -16px; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+}
+
+/* 选购页的选择器和底栏是操作控件，保持清晰、轻量，不再用大块留白或方框包住。 */
+@media (min-width: 761px) {
+.jd-storefront:has(.jd-checkout) .jd-checkout-top{ margin-bottom: 6px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading{ margin-bottom: 6px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading h1{ margin: 2px 0 3px; font-size: 25px; line-height: 1.2; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading p{ line-height: 1.45; }
+.jd-storefront:has(.jd-checkout) .jd-mode-switch-wrap{ margin-bottom: 8px; }
+.jd-storefront:has(.jd-checkout) .jd-mode-switch button{ min-height: 32px; min-width: 112px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-bar{ border-top-color: #cfd8cd; background: transparent; backdrop-filter: none; box-shadow: none; }
+}
+
+@media (max-width: 760px) {
+.jd-mode-switch-wrap{ gap: 7px; margin-bottom: 10px; }
+.jd-mode-switch button{ min-height: 38px; min-width: 0; padding: 0 13px; }
+.jd-mode-label{ font-size: 11px; }
+}
+
+/* 地址页是现场操作页：保留信息层级，把可滚动内容收进控件，避免单地址也撑出长页面。 */
+@media (min-width: 761px) {
+.jd-storefront:has(.jd-checkout) .jd-checkout{ padding-top: 6px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-top{ height: 30px; }
+.jd-storefront:has(.jd-checkout) .jd-checkout-grid{ gap: 22px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading{ margin-bottom: 5px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading .jd-kicker{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading h1{ margin: 2px 0 3px; font-size: 25px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading p{ font-size: 11px; line-height: 1.45; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-import{ padding: 11px 13px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-heading{ margin-bottom: 6px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-heading h2{ margin-top: 2px; font-size: 17px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-heading > span{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-import textarea{ min-height: 60px; padding: 8px 10px; font-size: 11px; line-height: 1.55; }
+  .jd-storefront:has(.jd-checkout) .jd-bulk-parse,
+.jd-storefront:has(.jd-checkout) .jd-bulk-confirm{ min-height: 32px; margin-top: 6px; padding: 0 11px; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-manual-heading{ margin: 10px 0 -4px; font-size: 17px; }
+.jd-storefront:has(.jd-checkout) .jd-addresses{ gap: 8px; }
+.jd-storefront:has(.jd-checkout) .jd-address{ padding: 8px 14px 12px; }
+.jd-storefront:has(.jd-checkout) .jd-address legend{ font-size: 15px; }
+.jd-storefront:has(.jd-checkout) .jd-remove{ min-height: 22px; margin: -5px 0 4px auto; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields{ gap: 8px 12px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields label{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields input{ height: 34px; margin-top: 4px; padding: 0 9px; font-size: 12px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields input::placeholder{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-address-meta{ display: flex; align-items: center; flex-wrap: wrap; gap: 7px 12px; margin-top: 8px; color: var(--jd-muted); font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-copies{ display: inline-flex; align-items: center; gap: 5px; }
+.jd-storefront:has(.jd-checkout) .jd-copies input{ width: 42px; height: 27px; padding: 0 5px; border: 1px solid #cdd3c8; background: #fffef9; text-align: center; }
+.jd-storefront:has(.jd-checkout) .jd-mini-options{ display: inline-flex; gap: 5px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option{ padding: 4px 7px; color: var(--jd-muted); border: 1px solid transparent; background: #eef1e9; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option small{ margin-left: 3px; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option.is-selected{ color: #fffdf4; border-color: transparent; background: var(--jd-green); }
+.jd-storefront:has(.jd-checkout) .jd-add-address{ min-height: 34px; margin-top: 7px; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-add-address > span{ margin-right: 6px; font-size: 15px; }
+}
+
+@media (max-width: 760px) {
+.jd-storefront:has(.jd-checkout) .jd-form-heading{ margin-bottom: 8px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading h1{ margin: 4px 0; font-size: 26px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading p{ line-height: 1.55; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-import{ padding: 14px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-heading{ margin-bottom: 8px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-heading h2{ margin-top: 3px; font-size: 19px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-import textarea{ min-height: 65px; padding: 9px 10px; line-height: 1.55; }
+  .jd-storefront:has(.jd-checkout) .jd-bulk-parse,
+.jd-storefront:has(.jd-checkout) .jd-bulk-confirm{ min-height: 38px; margin-top: 7px; }
+.jd-storefront:has(.jd-checkout) .jd-manual-heading{ margin-top: 17px; }
+.jd-storefront:has(.jd-checkout) .jd-addresses{ gap: 10px; }
+.jd-storefront:has(.jd-checkout) .jd-address{ padding-top: 12px; padding-bottom: 14px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields{ gap: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields input{ height: 40px; margin-top: 6px; }
+.jd-storefront:has(.jd-checkout) .jd-address-meta{ display: flex; align-items: center; flex-wrap: wrap; gap: 7px 10px; margin-top: 10px; color: var(--jd-muted); font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-copies{ display: inline-flex; align-items: center; gap: 5px; }
+.jd-storefront:has(.jd-checkout) .jd-copies input{ width: 45px; height: 30px; padding: 0 5px; border: 1px solid #cdd3c8; background: #fffef9; text-align: center; }
+.jd-storefront:has(.jd-checkout) .jd-mini-options{ display: inline-flex; gap: 5px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option{ padding: 5px 7px; color: var(--jd-muted); border: 1px solid transparent; background: #eef1e9; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option small{ margin-left: 3px; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option.is-selected{ color: #fffdf4; border-color: transparent; background: var(--jd-green); }
+.jd-storefront:has(.jd-checkout) .jd-add-address{ min-height: 45px; margin-top: 10px; }
+}
+
+/* 低于 1000px 的桌面窗口也按一屏工作台处理，避免浏览器半屏时被说明文字顶下去。 */
+@media (min-width: 761px) and (max-width: 1000px) {
+.jd-storefront:has(.jd-checkout) .jd-form-heading p{ display: none; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-import{ padding: 9px 11px; }
+.jd-storefront:has(.jd-checkout) .jd-bulk-import textarea{ min-height: 50px; }
+.jd-storefront:has(.jd-checkout) .jd-manual-heading{ margin-top: 7px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields input{ height: 30px; }
+.jd-storefront:has(.jd-checkout) .jd-add-address{ min-height: 32px; margin-top: 6px; }
+}
+
+/* 1024px 左右仍是窄桌面，沿用操作页字号，避免大屏展示字号把地址表单撑高。 */
+@media (min-width: 1001px) and (max-width: 1200px) {
+.jd-storefront:has(.jd-checkout) .jd-checkout{ padding-top: 2px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading .jd-kicker{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading h1{ font-size: 23px; line-height: 1.08; }
+.jd-storefront:has(.jd-checkout) .jd-form-heading p{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-add-address{ min-height: 28px; }
+}
+
+/* 地址输入是现场操作区：标题、输入和包装设置保持同一张紧凑卡片。 */
+.jd-visually-hidden{
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.jd-storefront:has(.jd-checkout) .jd-address{
+  padding: 10px 14px 12px;
+  border-color: #d6ddd2;
+  background: #fbfaf6;
+}
+.jd-storefront:has(.jd-checkout) .jd-address-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 24px;
+  margin-bottom: 7px;
+}
+.jd-storefront:has(.jd-checkout) .jd-address-head > strong{
+  color: var(--jd-ink);
+  font-family: var(--jd-serif);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.jd-storefront:has(.jd-checkout) .jd-address-head .jd-remove{
+  min-height: 24px;
+  margin: 0;
+  padding: 0;
+  color: var(--jd-orange);
+  font-size: 11px;
+}
+.jd-storefront:has(.jd-checkout) .jd-address-fields{
+  gap: 8px 12px;
+}
+.jd-storefront:has(.jd-checkout) .jd-address-fields label{
+  color: var(--jd-muted);
+  font-size: 11px;
+}
+.jd-storefront:has(.jd-checkout) .jd-address-fields input{
+  height: 36px;
+  margin-top: 4px;
+  padding: 0 9px;
+  border-color: #cdd6ce;
+  font-size: 12px;
+}
+.jd-storefront:has(.jd-checkout) .jd-address-fields input::placeholder{ font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-address-meta{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 11px;
+  margin-top: 7px;
+  color: var(--jd-muted);
+  font-size: 11px;
+}
+.jd-storefront:has(.jd-checkout) .jd-copies{ gap: 4px; }
+.jd-storefront:has(.jd-checkout) .jd-copies input{
+  width: 38px;
+  height: 26px;
+  padding: 0 4px;
+  border: 1px solid #cdd6ce;
+  background: #fffef9;
+  text-align: center;
+}
+.jd-storefront:has(.jd-checkout) .jd-mini-options{ gap: 4px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option{
+  padding: 4px 7px;
+  color: var(--jd-muted);
+  border: 1px solid transparent;
+  background: #eef1e9;
+  font-size: 11px;
+}
+.jd-storefront:has(.jd-checkout) .jd-mini-option small{ margin-left: 3px; font-size: 11px; }
+.jd-storefront:has(.jd-checkout) .jd-mini-option.is-selected{ color: #fffdf4; border-color: transparent; background: var(--jd-green); }
+@media (max-width: 760px) {
+.jd-storefront:has(.jd-checkout) .jd-address{ padding: 10px 13px 12px; }
+.jd-storefront:has(.jd-checkout) .jd-address-head > strong{ font-size: 15px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields{ gap: 9px; }
+.jd-storefront:has(.jd-checkout) .jd-address-fields input{ height: 38px; margin-top: 4px; }
+.jd-storefront:has(.jd-checkout) .jd-address-meta{ gap: 6px 9px; margin-top: 8px; }
+}

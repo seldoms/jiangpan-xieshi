@@ -1,0 +1,11 @@
+-- 规格缺货开关
+--
+-- 与 active 的区别（这是这个字段存在的意义）：
+--   active = 1 且 sold_out = 0  → 正常在售，可下单
+--   active = 1 且 sold_out = 1  → 缺货：用户端「看得见、标缺货、点不了」
+--   active = 0                  → 停用：完全不下发，用户端看不见
+--
+-- 缺货是常态（今年公蟹就"还不太好"），删除是例外；
+-- 有了它就不必为了"卖完了"去删规格，也就不会引出引用完整性问题。
+-- 引用它的套餐/团购天然不可下单（前端按 orderable 置灰）。
+ALTER TABLE specs ADD COLUMN sold_out INTEGER NOT NULL DEFAULT 0;

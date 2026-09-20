@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<rect width="1024" height="1024" fill="#F7F5EF"/>
+<style>text{font-family:system-ui,sans-serif;fill:#263B37}.slot{fill:#edf1ea;stroke:#477C78;stroke-width:1}.safe{fill:none;stroke:#CB5635;stroke-width:1;stroke-dasharray:5 4}</style>
+<rect class="slot" x="16" y="16" width="992" height="608"/>
+<rect class="safe" x="48" y="48" width="928" height="544"/>
+<text x="512.0" y="290.0" text-anchor="middle" font-size="20">A01 · 首页横幅</text>
+<text x="512.0" y="320.0" text-anchor="middle" font-size="20">x16 y16 · 992×608</text>
+<text x="512.0" y="350.0" text-anchor="middle" font-size="20">安全内边 32px</text>
+<rect class="slot" x="16" y="640" width="992" height="368"/>
+<rect class="safe" x="48" y="672" width="928" height="304"/>
+<text x="512.0" y="794.0" text-anchor="middle" font-size="20">A02 · 苏北蟹塘风光</text>
+<text x="512.0" y="824.0" text-anchor="middle" font-size="20">x16 y640 · 992×368</text>
+<text x="512.0" y="854.0" text-anchor="middle" font-size="20">安全内边 32px</text>
+</svg>

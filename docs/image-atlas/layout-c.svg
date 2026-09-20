@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<rect width="1024" height="1024" fill="#F7F5EF"/>
+<style>text{font-family:system-ui,sans-serif;fill:#263B37}.slot{fill:#edf1ea;stroke:#477C78;stroke-width:1}.safe{fill:none;stroke:#CB5635;stroke-width:1;stroke-dasharray:5 4}</style>
+<rect class="slot" x="16" y="16" width="488" height="488"/>
+<rect class="safe" x="112" y="112" width="296" height="296"/>
+<text x="260.0" y="230.0" text-anchor="middle" font-size="20">C01 · 蟹形品牌标志</text>
+<text x="260.0" y="260.0" text-anchor="middle" font-size="20">x16 y16 · 488×488</text>
+<text x="260.0" y="290.0" text-anchor="middle" font-size="20">安全内边 96px</text>
+<rect class="slot" x="520" y="16" width="488" height="488"/>
+<rect class="safe" x="568" y="64" width="392" height="392"/>
+<text x="764.0" y="230.0" text-anchor="middle" font-size="20">C02 · 普通运输包装</text>
+<text x="764.0" y="260.0" text-anchor="middle" font-size="20">x520 y16 · 488×488</text>
+<text x="764.0" y="290.0" text-anchor="middle" font-size="20">安全内边 48px</text>
+<rect class="slot" x="16" y="520" width="488" height="488"/>
+<rect class="safe" x="64" y="568" width="392" height="392"/>
+<text x="260.0" y="734.0" text-anchor="middle" font-size="20">C03 · 闭合礼盒</text>
+<text x="260.0" y="764.0" text-anchor="middle" font-size="20">x16 y520 · 488×488</text>
+<text x="260.0" y="794.0" text-anchor="middle" font-size="20">安全内边 48px</text>
+<rect class="slot" x="520" y="520" width="104" height="104"/>
+<rect class="safe" x="536" y="536" width="72" height="72"/>
+<text x="572.0" y="558.0" text-anchor="middle" font-size="8">C04 · 向右图标</text>
+<text x="572.0" y="572.0" text-anchor="middle" font-size="8">x520 y520 · 104×104</text>
+<text x="572.0" y="586.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="648" y="520" width="104" height="104"/>
+<rect class="safe" x="664" y="536" width="72" height="72"/>
+<text x="700.0" y="558.0" text-anchor="middle" font-size="8">C05 · 向左图标</text>
+<text x="700.0" y="572.0" text-anchor="middle" font-size="8">x648 y520 · 104×104</text>
+<text x="700.0" y="586.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="776" y="520" width="104" height="104"/>
+<rect class="safe" x="792" y="536" width="72" height="72"/>
+<text x="828.0" y="558.0" text-anchor="middle" font-size="8">C06 · 增加图标</text>
+<text x="828.0" y="572.0" text-anchor="middle" font-size="8">x776 y520 · 104×104</text>
+<text x="828.0" y="586.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="904" y="520" width="104" height="104"/>
+<rect class="safe" x="920" y="536" width="72" height="72"/>
+<text x="956.0" y="558.0" text-anchor="middle" font-size="8">C07 · 减少图标</text>
+<text x="956.0" y="572.0" text-anchor="middle" font-size="8">x904 y520 · 104×104</text>
+<text x="956.0" y="586.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="520" y="648" width="104" height="104"/>
+<rect class="safe" x="536" y="664" width="72" height="72"/>
+<text x="572.0" y="686.0" text-anchor="middle" font-size="8">C08 · 购物袋图标</text>
+<text x="572.0" y="700.0" text-anchor="middle" font-size="8">x520 y648 · 104×104</text>
+<text x="572.0" y="714.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="648" y="648" width="104" height="104"/>
+<rect class="safe" x="664" y="664" width="72" height="72"/>
+<text x="700.0" y="686.0" text-anchor="middle" font-size="8">C09 · 确认图标</text>
+<text x="700.0" y="700.0" text-anchor="middle" font-size="8">x648 y648 · 104×104</text>
+<text x="700.0" y="714.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="776" y="648" width="104" height="104"/>
+<rect class="safe" x="792" y="664" width="72" height="72"/>
+<text x="828.0" y="686.0" text-anchor="middle" font-size="8">C10 · 地址图标</text>
+<text x="828.0" y="700.0" text-anchor="middle" font-size="8">x776 y648 · 104×104</text>
+<text x="828.0" y="714.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="904" y="648" width="104" height="104"/>
+<rect class="safe" x="920" y="664" width="72" height="72"/>
+<text x="956.0" y="686.0" text-anchor="middle" font-size="8">C11 · 关闭图标</text>
+<text x="956.0" y="700.0" text-anchor="middle" font-size="8">x904 y648 · 104×104</text>
+<text x="956.0" y="714.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="520" y="776" width="104" height="104"/>
+<rect class="safe" x="536" y="792" width="72" height="72"/>
+<text x="572.0" y="814.0" text-anchor="middle" font-size="8">C12 · 包装图标</text>
+<text x="572.0" y="828.0" text-anchor="middle" font-size="8">x520 y776 · 104×104</text>
+<text x="572.0" y="842.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="648" y="776" width="104" height="104"/>
+<rect class="safe" x="664" y="792" width="72" height="72"/>
+<text x="700.0" y="814.0" text-anchor="middle" font-size="8">C13 · 产地图标</text>
+<text x="700.0" y="828.0" text-anchor="middle" font-size="8">x648 y776 · 104×104</text>
+<text x="700.0" y="842.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="776" y="776" width="104" height="104"/>
+<rect class="safe" x="792" y="792" width="72" height="72"/>
+<text x="828.0" y="814.0" text-anchor="middle" font-size="8">C14 · 配送图标</text>
+<text x="828.0" y="828.0" text-anchor="middle" font-size="8">x776 y776 · 104×104</text>
+<text x="828.0" y="842.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="904" y="776" width="104" height="104"/>
+<rect class="safe" x="920" y="792" width="72" height="72"/>
+<text x="956.0" y="814.0" text-anchor="middle" font-size="8">C15 · 时间图标</text>
+<text x="956.0" y="828.0" text-anchor="middle" font-size="8">x904 y776 · 104×104</text>
+<text x="956.0" y="842.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="520" y="904" width="104" height="104"/>
+<rect class="safe" x="536" y="920" width="72" height="72"/>
+<text x="572.0" y="942.0" text-anchor="middle" font-size="8">C16 · 展开图标</text>
+<text x="572.0" y="956.0" text-anchor="middle" font-size="8">x520 y904 · 104×104</text>
+<text x="572.0" y="970.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="648" y="904" width="104" height="104"/>
+<rect class="safe" x="664" y="920" width="72" height="72"/>
+<text x="700.0" y="942.0" text-anchor="middle" font-size="8">C17 · 编辑图标</text>
+<text x="700.0" y="956.0" text-anchor="middle" font-size="8">x648 y904 · 104×104</text>
+<text x="700.0" y="970.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="776" y="904" width="104" height="104"/>
+<rect class="safe" x="792" y="920" width="72" height="72"/>
+<text x="828.0" y="942.0" text-anchor="middle" font-size="8">C18 · 删除图标</text>
+<text x="828.0" y="956.0" text-anchor="middle" font-size="8">x776 y904 · 104×104</text>
+<text x="828.0" y="970.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+<rect class="slot" x="904" y="904" width="104" height="104"/>
+<rect class="safe" x="920" y="920" width="72" height="72"/>
+<text x="956.0" y="942.0" text-anchor="middle" font-size="8">C19 · 搜索图标</text>
+<text x="956.0" y="956.0" text-anchor="middle" font-size="8">x904 y904 · 104×104</text>
+<text x="956.0" y="970.0" text-anchor="middle" font-size="8">安全内边 16px</text>
+</svg>

@@ -1,0 +1,32 @@
+.poster-backdrop { position: fixed; inset: 0; z-index: 300; display: grid; place-items: center; padding: 16px; background: #172e2db8; }
+.poster-dialog { display: flex; flex-direction: column; width: min(100%, 470px); max-height: calc(100dvh - 32px); min-height: 0; background: var(--jd-paper, #f7f5ef); color: var(--jd-ink, #234b48); border-radius: 10px; overflow: auto; padding: 12px 16px; box-shadow: 0 12px 48px #11262433; }
+.poster-toolbar { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; gap: 12px; }
+.poster-toolbar h2 { margin: 0; font-size: 18px; }
+.poster-toolbar button { min-width: 44px; min-height: 44px; border: 0; background: transparent; color: inherit; font-size: 28px; cursor: pointer; }
+.poster-image-area { min-height: 0; flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
+.poster-image { display: block; width: auto; max-width: 100%; max-height: min(58dvh, 700px); object-fit: contain; cursor: zoom-in; -webkit-touch-callout: default; user-select: auto; -webkit-user-select: auto; }
+.poster-image:focus-visible, .poster-dialog button:focus-visible, .poster-dialog a:focus-visible { outline: 2px solid var(--jd-orange, #b84927); outline-offset: 3px; }
+.poster-state { padding: 32px 12px; text-align: center; font-size: 13px; }
+.poster-state button, .poster-actions a, .poster-actions button, .poster-link-row button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 12px; background: #e8ede4; border: 0; border-radius: 3px 6px 3px 4px; color: var(--jd-ink, #234b48); font: inherit; font-size: 13px; text-decoration: none; cursor: pointer; }
+.poster-link-row { display: flex; gap: 6px; flex: 0 0 auto; margin-top: 10px; }
+.poster-link-row input { width: 0; min-width: 0; flex: 1; border: 1px solid var(--jd-line, #cad2c8); background: transparent; color: inherit; border-radius: 5px; padding: 0 8px; font-size: 12px; }
+.poster-link-row button { flex-shrink: 0; }
+.poster-actions { display: flex; flex-wrap: wrap; flex: 0 0 auto; gap: 6px; margin-top: 8px; }
+.poster-actions > * { flex: 1; white-space: nowrap; }
+.poster-actions a { background: var(--jd-green, #477c78); color: #fff; }
+.poster-dialog button:disabled { opacity: .45; cursor: wait; }
+.poster-message, .poster-local-note { margin: 7px 0 0; flex: 0 0 auto; font-size: 11px; line-height: 1.5; text-align: center; color: var(--jd-muted, #66746b); }
+.poster-local-note { color: var(--jd-orange, #975336); }
+.poster-message:empty { display: none; }
+.poster-fullscreen { padding: 0; background: #172321; }
+.poster-fullscreen .poster-dialog { width: 100%; height: 100dvh; max-height: 100dvh; padding: max(4px, env(safe-area-inset-top)) 12px max(8px, env(safe-area-inset-bottom)); border-radius: 0; background: transparent; color: white; }
+.poster-fullscreen .poster-toolbar { width: min(100%, 700px); align-self: center; }
+.poster-fullscreen .poster-image { max-height: calc(100dvh - 154px); max-width: 100%; cursor: default; }
+.poster-fullscreen .poster-actions { width: min(100%, 280px); align-self: center; }
+.poster-fullscreen .poster-message { color: #c3cfca; }
+.poster-fullscreen .poster-local-note { color: #efb69f; }
+@media (max-width: 400px) {
+  .poster-backdrop:not(.poster-fullscreen) { padding: 8px; }
+  .poster-dialog { padding: 8px 10px; max-height: calc(100dvh - 16px); }
+  .poster-actions button, .poster-actions a { padding: 0 8px; font-size: 12px; }
+}

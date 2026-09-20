@@ -1,0 +1,122 @@
+{
+  "A01": {
+    "src": "/assets/jiangdu-v1/banner.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "A02": {
+    "src": "/assets/jiangdu-v1/pond.webp",
+    "width": 554,
+    "height": 264
+  },
+  "B01": {
+    "src": "/assets/jiangdu-v1/male.webp",
+    "width": 576,
+    "height": 576
+  },
+  "B02": {
+    "src": "/assets/jiangdu-v1/female.webp",
+    "width": 576,
+    "height": 576
+  },
+  "B03": {
+    "src": "/assets/jiangdu-v1/pair.webp",
+    "width": 576,
+    "height": 576
+  },
+  "B04": {
+    "src": "/assets/jiangdu-v1/gift-open.webp",
+    "width": 576,
+    "height": 576
+  },
+  "C03": {
+    "src": "/assets/jiangdu-v1/gift-closed.webp",
+    "width": 576,
+    "height": 576
+  },
+  "C02": {
+    "src": "/assets/jiangdu-v1/package-plain.webp",
+    "width": 576,
+    "height": 576
+  },
+  "C01": {
+    "src": "/assets/jiangdu-v1/logo.png",
+    "width": 256,
+    "height": 256
+  },
+  "C04": {
+    "src": "/assets/jiangdu-v1/icons/arrow-right.png",
+    "width": 128,
+    "height": 128
+  },
+  "C05": {
+    "src": "/assets/jiangdu-v1/icons/arrow-left.png",
+    "width": 128,
+    "height": 128
+  },
+  "C06": {
+    "src": "/assets/jiangdu-v1/icons/plus.png",
+    "width": 128,
+    "height": 128
+  },
+  "C07": {
+    "src": "/assets/jiangdu-v1/icons/minus.png",
+    "width": 128,
+    "height": 128
+  },
+  "C08": {
+    "src": "/assets/jiangdu-v1/icons/bag.png",
+    "width": 128,
+    "height": 128
+  },
+  "C09": {
+    "src": "/assets/jiangdu-v1/icons/check.png",
+    "width": 128,
+    "height": 128
+  },
+  "C10": {
+    "src": "/assets/jiangdu-v1/icons/pin.png",
+    "width": 128,
+    "height": 128
+  },
+  "C11": {
+    "src": "/assets/jiangdu-v1/icons/close.png",
+    "width": 128,
+    "height": 128
+  },
+  "C12": {
+    "src": "/assets/jiangdu-v1/icons/box.png",
+    "width": 128,
+    "height": 128
+  },
+  "C13": {
+    "src": "/assets/jiangdu-v1/icons/leaf.png",
+    "width": 128,
+    "height": 128
+  },
+  "C14": {
+    "src": "/assets/jiangdu-v1/icons/truck.png",
+    "width": 128,
+    "height": 128
+  },
+  "C15": {
+    "src": "/assets/jiangdu-v1/icons/clock.png",
+    "width": 128,
+    "height": 128
+  },
+  "C17": {
+    "src": "/assets/jiangdu-v1/icons/edit.png",
+    "width": 128,
+    "height": 128
+  },
+  "C18": {
+    "src": "/assets/jiangdu-v1/icons/trash.png",
+    "width": 128,
+    "height": 128
+  },
+  "C19": {
+    "src": "/assets/jiangdu-v1/icons/search.png",
+    "width": 128,
+    "height": 128
+  }
+}

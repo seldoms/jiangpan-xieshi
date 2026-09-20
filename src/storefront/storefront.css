@@ -1,0 +1,392 @@
+.jd-storefront{
+  --jd-paper: #f7f5ef;
+  --jd-green: #477c78;
+  --jd-blue: #557f9a;
+  --jd-orange: #b64b2d;
+  --jd-gold: #c39a4c;
+  --jd-ink: #263b37;
+  --jd-muted: #606e67;
+  --jd-danger: #a13b2a;
+  --jd-line: #d9ddd2;
+  --jd-serif: 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'SimSun', serif;
+  min-height: calc(100vh - 42px);
+  color: var(--jd-ink);
+  background-color: var(--jd-paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23748170' opacity='.042' filter='url(%23p)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.jd-storefront button, .jd-storefront a, .jd-storefront input{ -webkit-tap-highlight-color: transparent; }
+.jd-storefront button{ font-family: inherit; }
+.jd-storefront button:focus-visible, .jd-storefront a:focus-visible, .jd-storefront input:focus-visible{ outline: 3px solid var(--jd-green); outline-offset: 5px; }
+.jd-storefront button:disabled{ cursor: not-allowed; opacity: .4; }
+.jd-storefront a{ color: inherit; text-decoration: none; }
+.jd-storefront svg{ display: block; }
+.jd-storefront h1, .jd-storefront h2, .jd-storefront h3, .jd-storefront p{ margin: 0; }
+.jd-storefront main:focus{ outline: none; }
+.jd-storefront main{ min-height: 60vh; }
+.jd-skip-link{ position: fixed; top: -100px; left: 20px; padding: 14px; background: white; z-index: 50; }
+.jd-skip-link:focus{ top: 48px; }
+.jd-header{ max-width: 1160px; width: 100%; height: 72px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--jd-line); }
+.jd-brand{ display: flex; align-items: center; gap: 14px; padding: 0; color: var(--jd-ink); background: transparent; text-align: left; }
+.jd-brand strong{ display: block; font-family: var(--jd-serif); font-size: 26px; font-weight: 700; letter-spacing: 3px; }
+.jd-brand small{ display: block; margin-top: 5px; color: var(--jd-muted); font-size: 11px; letter-spacing: 3px; }
+.jd-header nav{ display: flex; gap: 38px; padding: 0 80px 0 0; }
+.jd-header nav button{ position: relative; padding: 14px 0; color: var(--jd-muted); background: transparent; font-size: 13px; letter-spacing: 2px; white-space: nowrap; }
+.jd-header nav button.is-active{ color: var(--jd-ink); }
+.jd-header nav button.is-active::after{ content: ''; position: absolute; bottom: 4px; left: calc(50% - 9px); width: 18px; height: 2px; background: var(--jd-orange); transform: rotate(-4deg); }
+.jd-my-orders{ display: inline-flex; align-items: center; gap: 9px; min-height: 36px; color: var(--jd-ink); background: transparent; font-size: 12px; }
+.jd-my-orders b{ display: grid; place-items: center; min-width: 20px; height: 20px; border-radius: 50%; background: var(--jd-green); color: white; font-size: 11px; }
+.jd-header-actions{ display: flex; align-items: center; gap: 12px; }
+.jd-login-entry{ min-height: 36px; padding: 0 12px; color: var(--jd-ink); background: transparent; font-size: 12px; white-space: nowrap; border: 1px solid var(--jd-line); border-radius: 3px; }
+.jd-account-menu{ position: relative; flex-shrink: 0; }
+.jd-account-dropdown{ position: absolute; top: calc(100% + 6px); right: 0; z-index: 30; display: grid; gap: 2px; min-width: 128px; padding: 6px; border: 1px solid var(--jd-line); border-radius: 6px; background: #fffdf6; box-shadow: 0 8px 24px rgba(38,59,55,.12); }
+.jd-account-name{ display: block; max-width: 180px; padding: 5px 10px 7px; overflow: hidden; color: var(--jd-muted); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; border-bottom: 1px dashed var(--jd-line); }
+.jd-account-dropdown button{ display: block; width: 100%; padding: 7px 10px; color: var(--jd-danger); background: transparent; font-size: 12px; text-align: left; border-radius: 4px; white-space: nowrap; }
+.jd-account-dropdown button:hover{ background: #f7ece8; }
+.jd-cart-button{ color: var(--jd-green); }
+.jd-kicker{ display: flex; align-items: center; gap: 9px; color: var(--jd-green); font-size: 11px; font-weight: 500; letter-spacing: 3px; line-height: 1.7; }
+.jd-kicker i{ width: 5px; height: 5px; background: var(--jd-green); border-radius: 50%; }
+.jd-button{ display: inline-flex; align-items: center; justify-content: center; gap: 25px; min-height: 50px; padding: 0 25px; border: 1px solid transparent; border-radius: 3px 6px 3px 4px; color: #fffdf4; background: var(--jd-orange); font-size: 13px; font-weight: 500; letter-spacing: 1px; transition: background .2s, transform .2s; }
+.jd-button:hover:not(:disabled){ background: #983f29; transform: translateY(-2px); }
+.jd-button-plain{ display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 15px; border: 1px solid #b9c8b9; border-radius: 3px; color: var(--jd-green); background: transparent; font-size: 12px; transition: background .2s, border-color .2s; }
+.jd-button-plain:hover:not(:disabled){ background: #e9eee4; border-color: var(--jd-green); }
+.jd-button-plain:disabled{ opacity: .55; }
+.jd-link{ display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 44px; padding: 0; color: var(--jd-muted); background: transparent; font-size: 12px; }
+.jd-link:hover{ color: var(--jd-orange); }
+.jd-link > span{ font-size: 17px; }
+.jd-checkout{ max-width: 1160px; width: 100%; margin: 0 auto; padding: 28px 32px 0; }
+.jd-checkout-top{ display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 18px; }
+.jd-checkout-cutoff{ color: var(--jd-muted); font-size: 11px; white-space: nowrap; }
+.jd-checkout-cutoff.is-passed{ color: var(--jd-danger); }
+.jd-steps{ display: flex; gap: 32px; padding: 0; margin: 0; list-style: none; color: var(--jd-muted); font-size: 11px; }
+.jd-steps li{ display: flex; align-items: center; gap: 8px; }
+.jd-steps li > span{ width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid var(--jd-line); border-radius: 50%; font-family: Georgia, serif; }
+.jd-steps .is-current{ color: var(--jd-orange); }
+.jd-steps .is-current > span{ color: #fff; background: var(--jd-orange); border-color: var(--jd-orange); }
+.jd-steps .is-done{ color: var(--jd-green); }
+.jd-checkout-grid{ display: grid; grid-template-columns: minmax(0, 1fr) 296px; gap: 54px; align-items: start; }
+.jd-form-heading{ margin-bottom: 30px; }
+.jd-form-heading h1{ margin: 13px 0; font-family: var(--jd-serif); font-size: 38px; font-weight: 500; letter-spacing: 2px; }
+.jd-form-heading p{ color: var(--jd-muted); font-size: 12px; line-height: 1.9; }
+.jd-selection-card{ border: 1px solid var(--jd-line); background: #fbfaf6; }
+.jd-selection-items{ padding: 0 24px; }
+.jd-selection-item{ display: flex; align-items: center; gap: 16px; padding: 25px 0; }
+.jd-selection-item + .jd-selection-item{ border-top: 1px solid var(--jd-line); }
+.jd-gender{ width: 35px; height: 35px; display: grid; place-items: center; border-radius: 50% 47% 49% 46%; font-family: var(--jd-serif); font-size: 18px; }
+.jd-gender-green{ color: var(--jd-green); background: #e4ece2; }
+.jd-gender-orange{ color: var(--jd-orange); background: #f3e7d9; }
+.jd-selection-item h2{ font-size: 15px; font-weight: 500; }
+.jd-selection-item p{ margin-top: 5px; color: var(--jd-muted); font-size: 11px; }
+.jd-selection-item > div > span{ display: block; margin-top: 9px; color: var(--jd-orange); font-size: 12px; }
+.jd-quantity{ display: flex; align-items: center; margin-left: auto; border: 1px solid #c9d0c6; }
+.jd-quantity button{ width: 38px; height: 40px; color: var(--jd-ink); background: transparent; font-size: 19px; }
+.jd-quantity button:hover:not(:disabled){ background: #e7ece2; }
+.jd-quantity output{ min-width: 28px; text-align: center; font-size: 14px; font-variant-numeric: tabular-nums; }
+.jd-packaging{ padding: 0; margin: 31px 0 28px; border: 0; }
+.jd-packaging legend{ padding: 0; margin-bottom: 14px; font-family: var(--jd-serif); font-size: 21px; }
+.jd-package-option{ position: relative; display: flex; justify-content: space-between; padding: 19px 17px; border: 1px solid var(--jd-line); background: #fbfaf6; cursor: pointer; }
+.jd-package-option.is-selected{ border-color: var(--jd-green); background: #eef1e9; box-shadow: inset 0 0 0 1px var(--jd-green); }
+.jd-package-option input{ position: absolute; opacity: 0; width: 1px; height: 1px; }
+.jd-package-option:has(input:focus-visible){ outline: 3px solid var(--jd-green); outline-offset: 4px; }
+.jd-package-option strong, .jd-package-option small, .jd-package-option em{ display: block; }
+.jd-package-option strong{ font-size: 13px; font-weight: 500; }
+.jd-package-option small{ margin-top: 8px; color: var(--jd-muted); font-size: 11px; }
+.jd-package-option em{ margin-top: 17px; color: var(--jd-green); font-size: 11px; font-style: normal; }
+.jd-radio{ width: 15px; height: 15px; margin-left: 10px; flex-shrink: 0; border: 1px solid #9bad9e; border-radius: 50%; }
+.is-selected .jd-radio{ border: 5px solid var(--jd-green); }
+.jd-helper{ margin: 12px 0 0 !important; color: var(--jd-muted); font-size: 11px; line-height: 1.8; }
+.jd-summary{ position: sticky; top: 65px; padding: 27px 25px; border-top: 3px solid var(--jd-green); background: #ecefe6; }
+.jd-summary h2{ margin-top: 12px; font-family: var(--jd-serif); font-size: 25px; font-weight: 500; }
+.jd-summary-items{ display: grid; gap: 19px; margin-top: 29px; padding-bottom: 25px; border-bottom: 1px solid #cdd6c8; }
+.jd-summary-items > div{ display: flex; justify-content: space-between; gap: 15px; font-size: 12px; }
+.jd-summary-items strong{ font-weight: 500; white-space: nowrap; }
+.jd-summary-count{ display: grid; gap: 12px; padding: 23px 0; border-bottom: 1px solid #cdd6c8; color: var(--jd-muted); font-size: 11px; }
+.jd-summary-count b{ color: var(--jd-ink); font-weight: 500; }
+.jd-summary-total{ display: grid; gap: 8px; margin-top: 23px; }
+.jd-summary-total > span{ font-size: 12px; }
+.jd-summary-total strong{ color: var(--jd-orange); font-family: Georgia, serif; font-size: 34px; font-weight: 400; }
+.jd-summary-total small{ font-size: 17px; }
+.jd-summary-note{ padding-top: 24px; margin-top: 24px; border-top: 1px solid #cdd6c8; color: var(--jd-green); font-size: 11px; line-height: 2; }
+.jd-checkout-bar{ position: sticky; z-index: 5; bottom: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 19px 0 calc(19px + env(safe-area-inset-bottom)); margin-top: 25px; border-top: 1px solid var(--jd-line); background: #f7f5eff5; backdrop-filter: blur(12px); }
+.jd-checkout-bar > div{ display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 16px; }
+.jd-checkout-bar > div > span{ font-size: 12px; }
+.jd-checkout-bar strong{ color: var(--jd-orange); font-family: Georgia, serif; font-size: 27px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.jd-checkout-bar small{ color: var(--jd-muted); font-size: 11px; }
+.jd-mode-switch-wrap{ display: flex; align-items: center; gap: 13px; margin: 0 0 13px; }
+.jd-mode-label{ color: var(--jd-muted); font-size: 11px; letter-spacing: 2px; white-space: nowrap; }
+.jd-mode-switch{ display: inline-flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid #cbd5c9; border-radius: 999px; background: #edf1e9; }
+.jd-mode-switch button{ min-width: 108px; min-height: 36px; padding: 0 15px; border-radius: 999px; color: var(--jd-muted); background: transparent; font-size: 12px; letter-spacing: .5px; transition: color .2s ease, background .2s ease, box-shadow .2s ease; }
+.jd-mode-switch button:hover:not(.is-active){ color: var(--jd-ink); background: #f9faf5; }
+.jd-mode-switch button.is-active{ color: #fffdf4; background: var(--jd-green); box-shadow: 0 2px 7px #477c7833; }
+.jd-group-entry{ gap: 7px; }
+.jd-group-entry .jd-asset-icon{ color: var(--jd-green); }
+.jd-addresses{ display: grid; gap: 23px; }
+.jd-address{ position: relative; min-width: 0; margin: 0; padding: 14px 24px 24px; border: 1px solid var(--jd-line); background: #fbfaf6; }
+.jd-address legend{ padding: 0 8px; font-family: var(--jd-serif); font-size: 18px; }
+.jd-remove{ display: block; min-height: 35px; margin: -7px 0 9px auto; padding: 0; color: var(--jd-orange); background: transparent; font-size: 11px; }
+.jd-address-fields{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px 17px; }
+.jd-address-fields label{ display: block; color: var(--jd-muted); font-size: 12px; }
+.jd-address-fields input{ display: block; width: 100%; min-width: 0; height: 46px; margin-top: 10px; padding: 0 12px; border: 1px solid #cdd3c8; border-radius: 2px; background: #fffef9; color: var(--jd-ink); font-size: 14px; }
+.jd-address-fields input::placeholder{ color: #6d786f; font-size: 12px; }
+.jd-address-wide{ grid-column: 1 / -1; }
+.jd-add-address{ width: 100%; min-height: 53px; margin-top: 20px; border: 1px dashed #a6bab0; color: var(--jd-green); background: #eff2e9; font-size: 12px; }
+.jd-add-address > span{ margin-right: 12px; font-size: 19px; }
+.jd-form-error{ margin-top: 18px !important; color: var(--jd-danger); font-size: 13px; }
+.jd-orders-page{ max-width: 880px; margin: 0 auto; padding: 56px 32px 70px; }
+.jd-empty{ padding: 10px 20px 40px; text-align: center; }
+.jd-empty > svg{ width: 250px; height: 190px; margin: 0 auto; }
+.jd-empty h2{ font-family: var(--jd-serif); font-size: 25px; font-weight: 500; }
+.jd-empty p{ margin: 14px 0 25px; color: var(--jd-muted); font-size: 13px; }
+.jd-order-list{ display: grid; gap: 19px; }
+.jd-order{ padding: 24px; border: 1px solid var(--jd-line); background: #fffdf6; }
+.jd-order-top{ display: flex; justify-content: space-between; gap: 15px; color: var(--jd-muted); font-size: 11px; }
+.jd-order-status{ padding: 4px 9px; color: var(--jd-green); background: #e7eee3; border-radius: 3px; }
+.jd-order h2{ margin: 20px 0 10px; font-family: var(--jd-serif); font-size: 24px; font-weight: 500; }
+.jd-order p{ color: var(--jd-muted); font-size: 12px; }
+.jd-order-bottom{ display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 22px; padding-top: 19px; border-top: 1px solid var(--jd-line); font-size: 12px; }
+.jd-order-bottom small{ display: block; margin-top: 7px; color: var(--jd-muted); font-size: 11px; }
+.jd-order-bottom > strong{ color: var(--jd-orange); font-family: Georgia, serif; font-size: 26px; font-weight: 400; white-space: nowrap; }
+.jd-order-reorder{ display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 10px 0 0; color: var(--jd-green); background: transparent; border-top: 1px solid var(--jd-line); font-size: 12px; }
+.jd-order-reorder:hover{ color: var(--jd-orange); }
+/* 购物车草稿的两个操作按钮：横线画在按钮自身上（border-top），若容器不管对齐，
+   带图标的「继续下单」会比纯文字的「删除草稿」高，两条横线就错开。让同排按钮等高。 */
+.jd-draft-actions{ display: flex; align-items: stretch; flex-wrap: wrap; gap: 0 22px; }
+.jd-draft-actions .jd-order-reorder{ align-items: flex-start; }
+.jd-order-amount-note{ color: var(--jd-muted); font-size: 11px; font-weight: 400; }
+.jd-order-detail{ display: grid; gap: 14px; margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--jd-line); }
+.jd-shipment{ display: grid; gap: 8px; padding: 14px 16px; border: 1px solid var(--jd-line); background: #f7f5ec; }
+.jd-shipment-head{ display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; }
+.jd-shipment-head > span{ flex-shrink: 0; color: var(--jd-green); font-size: 11px; }
+.jd-shipment > p{ margin: 0; color: var(--jd-muted); font-size: 12px; }
+.jd-amount-lines{ display: grid; gap: 6px; font-size: 12px; }
+.jd-amount-lines > div{ display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.jd-amount-lines b{ font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.jd-amount-lines .is-total{ margin-top: 4px; padding-top: 8px; border-top: 1px solid var(--jd-line); font-size: 13px; }
+.jd-amount-lines .is-total b{ color: var(--jd-orange); font-size: 15px; }
+/* 购物车条目：搭配、份数、总只数与打包提示 */
+.jd-draft-detail{ margin: 8px 0 0; color: var(--jd-muted); font-size: 12px; line-height: 1.6; }
+.jd-draft-hint{ margin: 10px 0 0; padding: 7px 10px; color: #8a6a2f; background: #fbf3e2; font-size: 11px; line-height: 1.6; }
+.jd-draft-hint.is-ok{ color: #2f6b4f; background: #eaf3ec; }
+
+/* 购物车的配置清单：每种配置一行；份数由地址数量决定，所以这里只看搭配和已用套数。 */
+.jd-draft-configs{ display: grid; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
+.jd-draft-configs li{ display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+.jd-draft-configs b{ color: var(--jd-ink); font-size: 13px; }
+.jd-draft-configs span{ color: var(--jd-muted); font-size: 12px; }
+.jd-draft-configs em{ margin-left: auto; color: var(--jd-green); font-size: 12px; font-style: normal; }
+.jd-address-tags .jd-address-config{ color: #3f6b52; background: #eaf3ec; }
+
+/* ==================== 收货地址：紧凑卡片 + 弹窗编辑 ====================
+   一屏尽量多塞几条，重复的字段名（收货人/手机号码/详细地址）不显示——
+   值本身已经说明是什么。修改点开弹窗，避免每条都铺开一张大表单。 */
+.jd-addresses{ display: grid; gap: 8px; margin-top: 18px; }
+.jd-address-card{ min-width: 0; padding: 10px 12px; border: 1px solid var(--jd-line); background: #fffdf6; }
+.jd-address-card.has-problem{ border-color: #e0b9ab; box-shadow: inset 3px 0 var(--jd-danger); background: #fdf6f3; }
+.jd-address-top{ display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.jd-address-top strong{ font-family: var(--jd-serif); font-size: 13px; white-space: nowrap; }
+.jd-address-tags{ display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.jd-address-tags em{ padding: 1px 6px; color: #6f7d7f; background: #f1efe6; font-size: 11px; font-style: normal; white-space: nowrap; }
+.jd-address-tags .jd-address-money{ color: var(--jd-orange); background: #fbf0e7; font-family: 'DM Mono', monospace; }
+.jd-address-lines{ display: block; width: 100%; min-width: 0; margin: 6px 0 0; padding: 0; border: 0; background: transparent; text-align: left; }
+.jd-address-who{ display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+.jd-address-who b{ color: var(--jd-ink); font-size: 13px; }
+.jd-address-who span{ color: var(--jd-muted); font-family: 'DM Mono', monospace; font-size: 12px; }
+.jd-address-where{ display: block; margin-top: 3px; color: #5c6a6c; font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+.jd-address-actions{ display: flex; align-items: center; gap: 14px; margin-top: 8px; }
+.jd-address-edit, .jd-address-remove{ padding: 0; border: 0; background: transparent; font-size: 12px; }
+.jd-address-edit{ color: var(--jd-green); }
+.jd-address-remove{ color: #a2756a; }
+
+/* 修改地址弹窗 */
+.jd-address-modal{ position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 20px; }
+.jd-address-modal-mask{ position: absolute; inset: 0; background: rgba(30, 34, 33, .45); }
+.jd-address-modal-panel{ position: relative; display: flex; flex-direction: column; width: min(520px, 100%); max-height: min(86vh, calc(100dvh - 40px)); overflow: hidden; border: 1px solid var(--jd-line); background: #fffdf6; }
+.jd-address-modal-head{ display: flex; align-items: center; justify-content: space-between; flex: 0 0 auto; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--jd-line); }
+.jd-address-modal-head h3{ margin: 0; font-family: var(--jd-serif); font-size: 15px; font-weight: 700; }
+.jd-address-modal-body{ display: grid; min-height: 0; overflow-y: auto; overscroll-behavior: contain; gap: 12px; padding: 16px; }
+.jd-address-modal-body label{ display: block; min-width: 0; color: var(--jd-muted); font-size: 12px; }
+.jd-address-modal-body input{ display: block; width: 100%; min-width: 0; height: 42px; margin-top: 6px; padding: 0 12px; border: 1px solid #cdd3c8; border-radius: 2px; background: #fffef9; color: var(--jd-ink); font-size: 14px; }
+.jd-address-modal-meta{ display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; }
+.jd-address-modal-foot{ display: flex; justify-content: flex-end; flex: 0 0 auto; gap: 10px; padding: 12px 16px; border-top: 1px solid var(--jd-line); background: #fffdf6; }
+
+/* 购买须知横幅的横向约束写在 design-system.css —— desktop.css 是在本文件之后加载的，
+   放这里会被它的 max-width:1304px / white-space:nowrap 压住，实测不生效。 */
+.jd-success{ max-width: 720px; padding: 85px 24px 100px; margin: 0 auto; text-align: center; }
+.jd-success > .jd-kicker{ justify-content: center; }
+.jd-success h1{ margin: 16px 0 21px; font-family: var(--jd-serif); font-size: 39px; font-weight: 500; }
+.jd-success p{ color: var(--jd-muted); font-size: 13px; line-height: 2; }
+.jd-success .jd-success-note{ margin-top: 10px; font-size: 11px; }
+.jd-success > .jd-button{ margin-top: 30px; }
+.jd-success > .jd-link{ display: flex; margin: 15px auto 0; }
+@keyframes jd-reveal { from { opacity: 0; transform: translateY(10px); }to{ opacity: 1; transform: translateY(0); } }
+@media (max-width: 1100px) {
+.jd-header{ margin: 0; padding: 0 32px; }
+.jd-checkout-grid{ gap: 28px; grid-template-columns: minmax(0, 1fr) 270px; }
+.jd-selection-items{ padding: 0 16px; }
+.jd-selection-item{ gap: 10px; }
+.jd-package-option{ padding: 17px 12px; }
+}
+@media (max-width: 760px) {
+.jd-header{ height: 64px; gap: 12px; }
+.jd-brand{ gap: 10px; }
+.jd-brand strong{ font-size: 21px; letter-spacing: 2px; }
+.jd-brand small{ font-size: 11px; letter-spacing: 1.5px; }
+.jd-header nav{ padding: 0; gap: 22px; }
+.jd-header nav button{ font-size: 11px; letter-spacing: 1px; }
+.jd-my-orders{ font-size: 11px; }
+.jd-checkout{ padding: 20px 24px 0; }
+.jd-checkout-grid{ grid-template-columns: 1fr; gap: 8px; }
+.jd-summary{ position: static; margin-top: 18px; padding: 22px; }
+.jd-summary-items{ margin-top: 22px; gap: 16px; padding-bottom: 18px; }
+.jd-summary-count{ padding: 17px 0; display: flex; justify-content: space-between; }
+.jd-summary-total{ display: flex; justify-content: space-between; align-items: baseline; margin-top: 17px; }
+.jd-summary-note{ display: none; }
+.jd-checkout-bar{ margin-top: 25px; }
+.jd-checkout-bar .jd-button{ flex-shrink: 0; padding: 0 18px; gap: 13px; }
+.jd-checkout-top{ align-items: flex-start; }
+.jd-steps{ gap: 14px; font-size: 11px; margin-top: 10px; }
+.jd-steps li{ gap: 5px; }
+.jd-form-heading h1{ font-size: 34px; }
+}
+@media (max-width: 520px) {
+.jd-header nav{ display: none; }
+.jd-checkout{ padding: 17px 20px 0; }
+.jd-checkout-top{ flex-direction: column; gap: 6px; margin-bottom: 29px; }
+.jd-checkout-top > .jd-link{ min-height: 32px; }
+.jd-steps{ gap: 27px; }
+.jd-form-heading{ margin-bottom: 24px; }
+.jd-form-heading h1{ font-size: 30px; letter-spacing: 1px; }
+.jd-form-heading p{ font-size: 11px; }
+.jd-selection-item{ padding: 22px 0; gap: 10px; }
+.jd-selection-item h2{ font-size: 14px; }
+.jd-selection-item p{ font-size: 11px; }
+.jd-gender{ width: 29px; height: 29px; flex-shrink: 0; font-size: 16px; }
+.jd-quantity button{ width: 34px; height: 42px; }
+.jd-quantity output{ min-width: 23px; font-size: 13px; }
+.jd-package-option{ padding: 17px 12px; }
+.jd-package-option strong{ font-size: 12px; }
+.jd-package-option small, .jd-package-option em{ font-size: 11px; line-height: 1.6; }
+.jd-radio{ width: 13px; height: 13px; margin-left: 5px; }
+.jd-address{ padding: 15px 17px 20px; }
+.jd-address-fields{ grid-template-columns: 1fr; gap: 16px; }
+.jd-address-fields input{ font-size: 16px; }
+.jd-checkout-bar{ margin-left: -20px; margin-right: -20px; padding: 13px 20px calc(13px + env(safe-area-inset-bottom)); gap: 11px; box-shadow: 0 -7px 24px #263b3707; }
+.jd-checkout-bar > div{ column-gap: 7px; row-gap: 4px; }
+.jd-checkout-bar > div > span{ width: 100%; font-size: 11px; }
+.jd-checkout-bar strong{ font-size: 24px; }
+.jd-checkout-bar small{ font-size: 11px; }
+.jd-checkout-bar .jd-button{ min-height: 48px; padding: 0 14px; gap: 9px; font-size: 11px; }
+.jd-orders-page{ padding: 37px 22px 45px; }
+.jd-order{ padding: 20px; }
+.jd-order-bottom{ align-items: flex-start; font-size: 11px; }
+.jd-order-bottom > strong{ font-size: 23px; }
+.jd-success{ padding: 64px 22px 77px; }
+.jd-success h1{ font-size: 31px; }
+}
+
+/* 追加内容与移动端重排集中在文件末尾；桌面选购密度由 desktop.css 统一管理。 */
+.jd-summary .jd-kicker, .jd-summary-note{ color: #3f716b; }
+
+.jd-notice{ max-width: 1160px; min-height: 42px; display: flex; align-items: center; justify-content: space-between; gap: 15px; margin: 12px auto 0; padding: 9px 14px; color: #76552f; border: 1px solid #e8c98f; background: #fff5df; font-size: 11px; line-height: 1.5; }
+.jd-notice button{ width: 30px; height: 30px; flex: 0 0 30px; color: #9a7a4e; background: transparent; font-size: 20px; }
+.jd-bulk-import{ padding: 22px; border: 1px solid var(--jd-line); background: #eef1e9; }
+.jd-bulk-heading{ display: flex; align-items: flex-end; justify-content: space-between; gap: 15px; margin-bottom: 14px; }.jd-bulk-heading h2{ margin-top: 8px; font-family: var(--jd-serif); font-size: 23px; font-weight: 500; }.jd-bulk-heading > span{ color: var(--jd-muted); font-size: 11px; }
+.jd-bulk-import textarea{ width: 100%; min-height: 180px; display: block; resize: vertical; padding: 13px; border: 1px solid #cdd6c8; background: #fffef9; color: var(--jd-ink); font-family: inherit; font-size: 13px; line-height: 1.8; }
+.jd-bulk-parse, .jd-bulk-confirm{ min-height: 42px; margin-top: 11px; padding: 0 15px; color: #fffdf4; background: var(--jd-green); font-size: 11px; }.jd-bulk-parse:hover, .jd-bulk-confirm:hover:not(:disabled){ background: #376762; }.jd-bulk-confirm{ width: 100%; margin-top: 14px; }.jd-bulk-confirm:disabled{ cursor: not-allowed; opacity: .45; }
+.jd-bulk-preview{ margin-top: 17px; border: 1px solid #cdd6c8; background: #fffdf7; }.jd-bulk-preview-head{ display: flex; align-items: center; justify-content: space-between; padding: 13px; border-bottom: 1px solid #e2e6dd; font-size: 11px; }.jd-bulk-preview-head span{ color: var(--jd-green); font-size: 11px; }.jd-bulk-row{ display: flex; align-items: flex-start; gap: 9px; padding: 10px 13px; border-bottom: 1px dashed #e4e7df; }.jd-bulk-row > b{ width: 20px; color: #84938a; font-family: Georgia, serif; font-size: 12px; font-weight: 400; }.jd-bulk-row > div{ flex: 1; min-width: 0; }.jd-bulk-row strong, .jd-bulk-row small{ display: block; }.jd-bulk-row strong{ color: var(--jd-ink); font-size: 11px; }.jd-bulk-row small{ overflow: hidden; margin-top: 4px; color: var(--jd-muted); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }.jd-bulk-row em{ color: var(--jd-orange); font-family: Georgia, serif; font-size: 11px; font-style: normal; }.jd-bulk-row.has-error{ background: #fff0ec; }.jd-bulk-row.has-error small{ color: var(--jd-danger); }.jd-manual-heading{ display: flex; align-items: baseline; gap: 9px; margin: 25px 0 -7px; color: var(--jd-ink); font-family: var(--jd-serif); font-size: 20px; }.jd-manual-heading small{ color: var(--jd-muted); font-family: inherit; font-size: 11px; }
+@media (max-width: 760px) { .jd-notice { margin: 10px 20px 0; font-size: 11px; }.jd-bulk-import{ padding: 17px; }.jd-bulk-heading{ align-items: flex-start; flex-direction: column; gap: 6px; }.jd-bulk-import textarea{ min-height: 170px; font-size: 14px; }.jd-bulk-row small{ white-space: normal; }.jd-manual-heading{ font-size: 18px; } }
+
+/* 移动端是主要使用场景：用单列内容、紧凑头部和可触摸的操作区重新组织信息。 */
+@media (max-width: 760px) {
+.jd-header{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    background: rgba(247,245,239,.94);
+    backdrop-filter: blur(12px);
+  }
+.jd-brand{ min-width: 0; flex: 1 1 auto; }
+.jd-brand strong{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.jd-header-actions{ flex: 0 0 auto; }
+.jd-checkout-bar{ z-index: 10; }
+.jd-address-modal{ padding: 12px; }
+.jd-address-modal-panel{ max-height: calc(100dvh - 24px); }
+}
+
+@media (max-width: 520px) {
+.jd-header{ height: 64px; gap: 7px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
+.jd-brand{ gap: 7px; }
+.jd-brand strong{ font-size: 18px; letter-spacing: 1px; }
+.jd-brand small{ display: none; }
+.jd-header nav{ display: none; }
+.jd-header-actions{ gap: 2px; }
+.jd-header-actions .jd-my-orders:not(.jd-group-entry){ width: 36px; justify-content: center; gap: 0; padding: 0; font-size: 0; }
+.jd-header-actions .jd-my-orders:not(.jd-group-entry) > span:not(.jd-asset-icon){ display: none; }
+.jd-header-actions .jd-my-orders:not(.jd-group-entry) svg{ width: 18px; height: 18px; }
+.jd-group-entry{ min-width: 30px; padding: 0 3px; font-size: 11px; letter-spacing: 0; }
+.jd-login-entry{ min-width: 34px; padding: 0 3px; font-size: 11px; }
+.jd-notice{ margin: 8px 12px 0; padding: 8px 9px; align-items: flex-start; font-size: 11px; line-height: 1.65; }
+.jd-checkout{ padding-left: 16px; padding-right: 16px; }
+.jd-checkout-bar{ margin-left: -16px; margin-right: -16px; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+}
+
+/* 发起拼团复用选购配置，姓名和团名保持紧凑。 */
+.jd-group-config{ min-width: 0; margin: 0; padding: 0; border: 0; }
+.jd-group-config > label{ display: grid; gap: 6px; margin: 12px 0; color: var(--jd-muted); font-size: 13px; }
+.jd-group-config > label > input{ box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; padding: 8px 12px; border: 1px solid #cdd3c8; border-radius: 2px; background: #fffef9; color: var(--jd-ink); font: inherit; font-size: 16px; }
+.jd-group-result{ margin-top: 20px; }
+.jd-group-link{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+.jd-group-link code{ overflow-wrap: anywhere; min-width: 0; }
+
+/* 批量导入的问题条目：允许先导入暂存，但要在表单里一眼看出哪条需要改。 */
+.jd-address.has-problem{ border-color: #e0b9ab; box-shadow: inset 3px 0 var(--jd-danger); background: #fdf6f3; }
+.jd-field-problem{ margin: 10px 0 0; color: var(--jd-danger); font-size: 11px; line-height: 1.6; }
+.jd-bulk-preview-head .has-problem{ color: var(--jd-danger); }
+
+/* ---------- 今年只出礼盒 / 公蟹 10-01 开售：置灰的选项 ---------- */
+/* 只写 opacity / cursor / filter 这类没有别的规则在争的属性，放在本文件末尾最稳：
+   desktop.css / minimal.css / design-system.css 在后面加载，但同特异性下也不影响这几个属性。 */
+.jd-mini-option.is-disabled,
+.jd-quantity.is-disabled,
+.jd-selection-card .jd-package-option.is-disabled{ opacity: .45; cursor: not-allowed; filter: grayscale(1); }
+.jd-mini-option.is-disabled small{ color: #8d8d85; }
+.jd-selection-card .jd-selection-item.is-disabled{ opacity: .55; filter: grayscale(.85); }
+.jd-selection-card .jd-selection-item.is-disabled .jd-spec-price{ color: var(--jd-muted); }
+/* 价格与「暂停开售」小字竖排在数量控件左侧，不额外占横向空间（窄屏不会被挤爆）。 */
+.jd-spec-meta{ display: flex; flex-direction: column; align-items: flex-end; gap: 2px; min-width: 0; margin-left: auto; }
+.jd-spec-closed{ color: var(--jd-muted); font-size: 11px; font-style: normal; white-space: nowrap; }
+/* 公告横幅：与「购买须知」同一位置、同一套关闭交互，用左侧色条区分「平台公告」。 */
+.jd-notice-announcement{ border-left: 3px solid #b8862f; }
+/* 优惠券：独立券码输入框 + 独立「使用」动作，只在「填写收货信息」这一步出现。
+   高度（PC 32 / 移动 44）与移动端 16px 字号交给 design-system 统一层，这里只管外观与排布。 */
+.jd-coupon{ display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; margin-top: 16px; }
+.jd-coupon label{ font-size: 12px; color: var(--jd-muted); }
+.jd-coupon input{ flex: 1 1 190px; min-width: 0; padding: 0 10px; border: 1px solid #cdd3c8; border-radius: 2px; background: #fffef9; color: var(--jd-ink); }
+.jd-coupon input::placeholder{ color: #6d786f; font-size: 12px; }
+.jd-coupon .jd-coupon-msg{ font-size: 11px; color: var(--jd-muted); }
+.jd-coupon .jd-coupon-msg.is-error{ color: #a4442c; }
+.jd-coupon-line{ color: var(--jd-orange); }
+
+
+/* 看图选规格弹窗：规格分级标注。
+   分界位置 32% 是实测出来的（该图 1370x460，三两半与四两之间的空隙中点 x=439 = 32%），
+   左右两栏宽度与图上位置对齐，竖虚线贯穿标注带与图片，形成一条通到底的分界。 */
+.jd-spec-guide-size{margin-top:14px}
+.jd-spec-guide-grade{display:grid;grid-template-columns:32% 68%;font-size:12px;line-height:1.55;color:var(--jd-muted)}
+.jd-spec-guide-grade em{font-style:normal;font-weight:700;color:var(--jd-ink)}
+.jd-grade-left{padding:8px 14px 8px 8px;text-align:right}
+.jd-grade-right{padding:8px 8px 8px 14px;text-align:left;background:rgba(196,88,54,.06);border-radius:0 4px 4px 0}
+.jd-spec-guide-sizefig{position:relative}
+.jd-spec-guide-sizefig img{display:block;width:100%;height:auto}
+.jd-spec-guide-line{position:absolute;left:32%;top:-52px;bottom:0;width:0;border-left:2px dashed var(--jd-orange);opacity:.7;pointer-events:none}
+@media (max-width:520px){
+.jd-spec-guide-grade{grid-template-columns:32% 68%;font-size:11px;line-height:1.4}
+.jd-grade-left{padding-right:8px}
+.jd-grade-right{padding-left:8px}
+}

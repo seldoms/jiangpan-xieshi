@@ -1,0 +1,80 @@
+.jd-header-account{ display: flex; align-items: center; gap: 21px; flex-shrink: 0; white-space: nowrap; }
+.jd-header:has(.jd-header-account) .jd-brand{ flex-shrink: 0; }
+.jd-login-entry{ min-height: 36px; padding: 0 12px; border: 1px solid var(--jd-line); border-radius: 3px; color: var(--jd-ink); background: transparent; font-size: 12px; white-space: nowrap; transition: background .2s, border-color .2s; }
+.jd-header-account .jd-login-entry{ max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
+.jd-login-entry:hover, .jd-login-entry[aria-current="page"]{ background: #e9eee4; border-color: var(--jd-green); }
+.jd-header:has(.jd-header-account) nav{ padding-right: 0; }
+.jd-login{ max-width: 1100px; padding: 30px 32px 65px; margin: 0 auto; }
+.jd-login-topline{ display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+.jd-login-topline > span{ color: var(--jd-muted); font-size: 11px; letter-spacing: 2px; }
+.jd-login-layout{ display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 58px); min-height: 510px; }
+.jd-login-story{ display: flex; flex-direction: column; padding: 42px 38px 32px; border-radius: 2px; background: rgba(233,238,228,.72); }
+.jd-login-story h2{ margin: 26px 0 20px; font-family: var(--jd-serif); font-size: clamp(32px, 3.5vw, 46px); font-weight: 500; line-height: 1.55; letter-spacing: 4px; }
+.jd-login-picture{ margin-top: auto; padding-top: 26px; }
+.jd-login-picture > span:last-child{ display: block; margin-top: 14px; color: #627663; font-size: 11px; letter-spacing: 2px; }
+.jd-login-card{ display: flex; flex-direction: column; justify-content: center; padding: 50px 10px; background: transparent; }
+.jd-login-heading h1{ margin: 0 0 15px; font-family: var(--jd-serif); font-size: 34px; font-weight: 500; letter-spacing: 3px; }
+.jd-login-heading > p{ color: var(--jd-muted); font-size: 12px; line-height: 1.9; }
+.jd-login-form{ margin-top: 32px; }
+.jd-login-input{ display: flex; align-items: center; border: 1px solid #becbbb; border-radius: 3px; background: #fffefa; transition: border-color .2s, box-shadow .2s; }
+.jd-login-input:focus-within{ border-color: var(--jd-green); box-shadow: 0 0 0 3px #477c7813; }
+.jd-login-input.has-error{ border-color: var(--jd-danger); }
+.jd-login-input input{ width: 100%; min-width: 0; padding: 0 16px; border: 0; border-radius: inherit; background: transparent; color: var(--jd-ink); font-family: inherit; font-size: 16px; }
+.jd-login-input input::placeholder{ color: #798276; font-size: 14px; }
+.jd-login-input input:focus-visible{ outline-offset: 3px; outline-width: 2px; }
+.jd-login-error{ margin-top: 10px !important; color: var(--jd-danger); font-size: 11px; line-height: 1.8; }
+.jd-login-submit{ width: 100%; justify-content: space-between; margin-top: 20px; padding: 0 21px; font-size: 14px; }
+.jd-login-result{ text-align: center; }
+.jd-login-result-mark{ display: grid; place-items: center; width: 54px; height: 54px; margin: 0 auto 24px; border: 1px solid #becdb7; border-radius: 50%; background: #edf2e7; color: var(--jd-green); }
+.jd-login-result h1{ margin: 16px 0 18px; font-family: var(--jd-serif); font-size: 27px; font-weight: 500; line-height: 1.5; }
+.jd-login-result h1:focus{ outline: none; }
+.jd-login-result > p{ color: var(--jd-muted); font-size: 12px; line-height: 2; }
+.jd-login-result > .jd-order-code-value{ color: var(--jd-green); font-size: 23px; overflow-wrap: anywhere; margin-bottom: 12px; }
+.jd-login-result > .jd-button{ width: 100%; margin-top: 27px; }
+.jd-order-code-note{ display: block; margin-top: 18px; color: var(--jd-muted); font-size: 11px; }
+@media (max-width: 1000px) {
+.jd-login-story, .jd-login-card{ padding-left: 28px; padding-right: 28px; }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+.jd-header:has(.jd-header-account){ gap: 16px; }
+.jd-header:has(.jd-header-account) nav{ gap: 20px; }
+.jd-header-account{ gap: 6px; }
+.jd-header-account .jd-my-orders{ position: relative; width: 36px; justify-content: center; gap: 0; padding: 0; font-size: 0; }
+.jd-header-account .jd-my-orders > span:not(.jd-asset-icon){ display: none; }
+.jd-header-account .jd-my-orders > b{ position: absolute; top: -2px; right: -4px; }
+.jd-header-account .jd-login-entry{ max-width: 96px; }
+}
+@media (max-width: 760px) {
+.jd-header:has(.jd-header-account) nav{ display: none; }
+.jd-header:has(.jd-header-account) .jd-brand{ min-width: 0; flex: 1 1 auto; flex-shrink: 1; }
+.jd-login{ max-width: 560px; padding: 20px 22px 40px; }
+.jd-login-layout{ grid-template-columns: 1fr; gap: 24px; min-height: 0; }
+.jd-login-story{ order: 2; padding: 25px; }
+.jd-login-story h2{ margin: 13px 0 0; font-size: 25px; letter-spacing: 2px; }
+.jd-login-story h2 br{ display: none; }
+.jd-login-picture{ padding-top: 24px; }
+.jd-login-card{ padding: 24px 8px 42px; }
+.jd-login-heading h1{ font-size: 30px; }
+.jd-header-account{ gap: 10px; }
+.jd-login-entry{ padding: 0 11px; }
+}
+@media (max-width: 420px) {
+.jd-header-account{ gap: 6px; }
+.jd-header-account .jd-my-orders{ gap: 0; padding: 0 7px; }
+.jd-header-account .jd-my-orders > span:not(.jd-asset-icon){ display: none; }
+.jd-header-account .jd-group-entry > span{ display: inline; }
+.jd-header-account .jd-my-orders > b{ margin-left: 4px; }
+.jd-login{ padding: 18px 18px 32px; }
+.jd-login-card{ padding: 35px 22px; }
+.jd-login-story{ padding: 22px; }
+}
+@media (max-width: 360px) {
+.jd-header:has(.jd-header-account){ margin-left: 16px; margin-right: 16px; gap: 8px; }
+.jd-header:has(.jd-header-account) .jd-brand{ gap: 8px; }
+.jd-header:has(.jd-header-account) .jd-brand strong{ font-size: 18px; letter-spacing: 1px; }
+.jd-header:has(.jd-header-account) .jd-brand small{ font-size: 7px; letter-spacing: .5px; }
+.jd-header:has(.jd-header-account) .jd-brand > .jd-image-slot{ width: 32px; height: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+.jd-login-input, .jd-login-entry{ transition: none; }
+}

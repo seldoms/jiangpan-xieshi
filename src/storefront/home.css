@@ -1,0 +1,132 @@
+/* 首页价目表：图片受容器约束，不随原图分辨率或屏幕宽度拉高页面。 */
+.jd-home-price-list{ max-width: 1080px; margin: 0 auto; padding: 18px 24px 0; }
+.jd-home-heading{ display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 20px; margin-bottom: 14px; }
+.jd-home-heading h2{ margin: 0; font-family: var(--jd-serif); font-size: 24px; font-weight: 700; letter-spacing: 1px; }
+.jd-home-title-row{ display: flex; align-items: center; gap: 8px; }
+.jd-home-share{ display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; color: var(--jd-green); background: transparent; }
+.jd-home-share:hover{ background: #edf0e8; }
+.jd-home-heading > p{ display: flex; align-items: center; gap: 6px; padding-bottom: 3px; color: var(--jd-green); font-size: 12px; }
+.jd-home-heading > p.is-unavailable{ color: var(--jd-orange); }
+.jd-home-prices{ width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 15px; }
+.jd-home-kind-col{ width: 25%; }
+.jd-home-money-col{ width: 26%; }
+.jd-home-action-col{ width: 18%; }
+.jd-home-prices th, .jd-home-prices td{ padding: 4px 12px; text-align: left; }
+.jd-home-prices thead{ border-top: 1px solid var(--jd-line); border-bottom: 1px solid var(--jd-line); }
+.jd-home-prices thead th{ padding-top: 8px; padding-bottom: 8px; font-size: 12px; font-weight: 400; color: var(--jd-muted); }
+.jd-home-prices tbody{ border-bottom: 1px solid var(--jd-line); }
+.jd-home-prices tbody tr + tr{ border-top: 1px dashed var(--jd-line); }
+.jd-home-prices .jd-home-kind{ vertical-align: middle; padding: 8px 12px 8px 0; }
+.jd-home-kind > div{ display: flex; align-items: center; justify-content: center; gap: 12px; }
+.jd-home-kind .jd-home-kind-image{ display: block; width: 96px; height: 76px; flex: 0 0 96px; object-fit: contain; }
+.jd-home-kind strong{ white-space: nowrap; font-family: var(--jd-serif); font-size: 18px; font-weight: 600; }
+.jd-home-prices .jd-home-spec{ font-weight: 500; white-space: nowrap; }
+.jd-home-spec-label{ margin-left: 8px; font-family: var(--jd-serif); font-size: 18px; font-weight: 700; color: var(--jd-ink); vertical-align: middle; }
+.jd-home-prices .jd-home-money{ text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.jd-home-money strong{ color: var(--jd-green); font-size: 18px; font-weight: 600; }
+.jd-home-prices .jd-home-pick{ padding-right: 0; text-align: right; }
+.jd-home-pick button{ min-height: 44px; display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 0 12px; color: var(--jd-green); background: transparent; font-size: 13px; white-space: nowrap; }
+.jd-home-pick button:hover:not(:disabled){ background: #edf0e8; }
+.jd-home-buy{ display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+.jd-home-buy p{ font-size: 13px; line-height: 1.6; }
+.jd-home-buy small{ display: block; color: var(--jd-muted); font-size: 11px; }
+.jd-home-buy .jd-button{ flex-shrink: 0; min-height: 44px; padding: 0 18px; gap: 12px; font-size: 13px; }
+.jd-home-template{ display: flex; align-items: center; gap: 16px; justify-content: space-between; padding: 12px 16px; background: #edf0e8; }
+.jd-home-template > div{ min-width: 0; }
+.jd-home-template strong{ font-family: var(--jd-serif); font-size: 15px; font-weight: 600; }
+.jd-home-template p{ margin-top: 4px; color: var(--jd-muted); font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.jd-home-template button{ min-height: 44px; display: flex; align-items: center; gap: 20px; flex-shrink: 0; padding: 0; background: transparent; color: var(--jd-green); font-size: 15px; font-weight: 600; }
+.jd-home-template button > span{ display: inline-flex; align-items: center; gap: 6px; }
+.jd-home-template button small{ color: var(--jd-muted); font-size: 11px; font-weight: 400; }
+.jd-home-state{ padding: 30px 0; color: var(--jd-muted); font-size: 14px; }
+.jd-home-state button{ min-height: 44px; padding: 0 14px; margin-top: 8px; background: var(--jd-green); color: white; }
+
+.jd-storefront-home main{ min-height: 0; }
+.jd-storefront-home .jd-header nav{ padding-right: 0; gap: 24px; }
+.jd-storefront-home .jd-notice{ max-width: 912px; margin: 10px auto 0; padding: 8px 12px; font-size: 11px; }
+
+@media (max-width: 760px) {
+.jd-home-price-list{ padding: 16px 16px 0; }
+.jd-home-heading{ margin-bottom: 10px; gap: 6px; }
+.jd-home-heading h2{ font-size: 24px; }
+.jd-home-heading > p{ width: 100%; font-size: 12px; }
+.jd-home-kind-col{ width: 24%; }
+.jd-home-money-col{ width: 25%; }
+.jd-home-action-col{ width: 18%; }
+.jd-home-prices{ font-size: 14px; }
+.jd-home-prices th, .jd-home-prices td{ padding-left: 5px; padding-right: 5px; }
+.jd-home-prices thead th{ font-size: 11px; }
+.jd-home-prices .jd-home-kind{ padding: 6px 4px 6px 0; }
+.jd-home-kind > div{ flex-direction: column; gap: 0; }
+.jd-home-kind .jd-home-kind-image{ width: 64px; height: 52px; flex-basis: 64px; }
+.jd-home-kind strong{ font-size: 15px; }
+.jd-home-spec .crab-spec.crab-spec-compact .crab-spec-illustration{ width: 48px; height: 35px; }
+.jd-home-spec-label{ margin-left: 4px; font-size: 15px; }
+.jd-home-money strong{ font-size: 15px; }
+.jd-home-pick button{ gap: 3px; padding: 0 4px; font-size: 12px; }
+.jd-home-buy{ gap: 10px; padding: 12px 0; }
+.jd-home-buy p{ font-size: 12px; }
+.jd-home-buy small{ font-size: 11px; }
+.jd-home-buy .jd-button{ padding: 0 12px; font-size: 12px; gap: 6px; }
+.jd-home-template{ padding: 10px 12px; gap: 12px; }
+.jd-home-template strong{ font-size: 15px; }
+.jd-home-template button{ flex-direction: column; align-items: flex-end; justify-content: center; gap: 4px; font-size: 13px; }
+.jd-home-template button > span{ gap: 3px; }
+.jd-home-template button > span:last-child{ font-size: 12px; }
+.jd-storefront-home .jd-header nav{ display: none; }
+.jd-storefront-home .jd-notice{ margin: 6px 16px 0; font-size: 11px; line-height: 1.5; }
+}
+
+@media (max-width: 520px) {
+.jd-storefront-home .jd-header-account .jd-my-orders{ width: 36px; min-width: 36px; min-height: 36px; padding: 0; justify-content: center; }
+.jd-storefront-home .jd-header-account .jd-login-entry{ max-width: 56px; overflow: hidden; text-overflow: ellipsis; }
+.jd-storefront-home .jd-brand > span:last-child{ min-width: 0; }
+}
+
+@media (min-width: 761px) and (max-width: 1000px) {
+.jd-storefront-home .jd-header nav{ gap: 16px; }
+.jd-storefront-home .jd-brand small{ display: none; }
+.jd-storefront-home .jd-notice{ margin-left: 24px; margin-right: 24px; }
+}
+
+/* ==================== 首页视觉：Hero / 卖点 / 水乡图区 ====================
+   背景：首页原来一打开就是价目表，banner/pond 这些水彩插画一直躺在资源目录里没人引用。 */
+
+/* 主图完整展示；文字放在独立区域，避免遮住蟹体、姜丝醋碟和醋瓶。 */
+.jd-home-hero{ display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); margin: 0 0 26px; background: #234b48; }
+.jd-home-hero > img{ display: block; width: 100%; height: auto; align-self: center; object-fit: contain; }
+.jd-home-hero-copy{
+  display: grid; align-content: center; gap: 12px; min-width: 0;
+  padding: clamp(16px, 2.5vw, 30px);
+  color: #f7f4e9;
+}
+.jd-home-hero-copy h1{ margin: 0; font-family: var(--jd-serif); font-size: clamp(26px, 3.6vw, 40px); font-weight: 700; letter-spacing: 5px; }
+.jd-home-hero-time{ display: flex; align-items: center; gap: 6px; margin: 0; font-size: 13px; opacity: .95; }
+.jd-home-hero-time.is-unavailable{ color: #ffd8c6; }
+.jd-home-hero-actions{ display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.jd-home-hero-actions .jd-button-plain{ color: #f7f4e9; border-color: rgba(247,244,233,.55); }
+.jd-home-hero-actions .jd-button-plain:hover:not(:disabled){ background: rgba(247,244,233,.14); border-color: #f7f4e9; }
+
+/* 卖点条：把产地、冷链、包装讲在单价之前。 */
+.jd-home-points{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 0 0 30px; padding: 0; list-style: none; }
+.jd-home-points li{ display: flex; align-items: center; gap: 8px; min-width: 0; padding: 10px 14px; border: 1px solid var(--jd-line); background: #fffdf6; white-space: nowrap; }
+.jd-home-points svg{ color: var(--jd-green); flex-shrink: 0; }
+.jd-home-points b{ font-size: 13px; font-weight: 700; }
+.jd-home-points span{ color: var(--jd-muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; }
+
+/* 水乡与吃蟹：图片外露，不再藏在折叠里。 */
+.jd-home-story{ margin: 32px 0 0; }
+.jd-home-story h2{ margin: 0 0 15px; font-family: var(--jd-serif); font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+.jd-home-story-grid{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.jd-home-story figure{ display: grid; grid-template-rows: auto 1fr; margin: 0; border: 1px solid var(--jd-line); background: #fffdf6; }
+.jd-home-story img{ display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: contain; background: #f7f5ef; }
+.jd-home-story figcaption{ display: grid; gap: 3px; padding: 12px 15px; }
+.jd-home-story figcaption b{ font-size: 13px; }
+.jd-home-story figcaption span{ color: var(--jd-muted); font-size: 12px; }
+
+@media (max-width: 640px) {
+.jd-home-points{ grid-template-columns: 1fr; gap: 8px; margin-bottom: 22px; }
+.jd-home-story-grid{ grid-template-columns: 1fr; gap: 14px; }
+.jd-home-hero{ grid-template-columns: minmax(0, 1fr); }
+.jd-home-hero-copy h1{ letter-spacing: 3px; }
+}

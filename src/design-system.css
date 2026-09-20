@@ -1,0 +1,303 @@
+/* ==================== 设计系统统一层 ====================
+   2026-09-19 定版规则，改任何页面前先看这里。
+
+   为什么单独一个文件、并且必须在 main.jsx 最后 import：
+   Vite 的样式顺序 = import 顺序，styles.css 最先加载，各模块 CSS（storefront/
+   home/desktop/group…）在后，同特异性下后者胜出。统一层放在这里、最后加载，
+   才能真正按住各页面的历史散数，而不是写了一堆没生效的规则。
+
+   规则：
+   1. 字号 7 档：11 辅助 / 12 控件 / 13 正文 / 15 小标题 / 18 面板标题 / 24 页面标题 / 32 数字大标
+   2. 控件高度 3 档：34 紧凑（表格行内）/ 42 标准（按钮、输入框、下拉）/ 50 主操作（提交类）
+   3. 「标题 + 右侧按钮」的卡片头一律垂直居中，禁止顶对齐（顶对齐会让按钮上下留白不均）
+   4. 同类元素跨页面必须同高同字号；两端各自统一：手机（≤760px）44px 触摸目标，PC（≥761px）32px
+   5. 新增样式先查这里有没有可复用的档位，不要再写第四个高度值
+   ====================================================== */
+
+:root{
+  --fs-hint: 11px;
+  --fs-control: 12px;
+  --fs-body: 13px;
+  --fs-subtitle: 15px;
+  --fs-panel: 18px;
+  --fs-page: 24px;
+  --fs-figure: 32px;
+  --h-compact: 34px;
+  --h-base: 42px;
+  --h-primary: 50px;
+}
+
+/* ---------- 按钮与表单控件字号 ----------
+   注意：控件高度一律由文末的 PC（≥761px，32px）/ 移动（≤760px，44px）两个媒体块
+   钉死，这里只写字号。不要再在这一段写 height/min-height——写了也会被文末的
+   高特异性兜底覆盖，只会留下"看着有、实际不生效"的误导规则。 */
+.button{ font-size: var(--fs-control); }
+.filter-button{ font-size: var(--fs-hint); }
+.admin-layout .admin-batch-select{ font-size: var(--fs-control); }
+.icon-button{ width: var(--h-base); height: var(--h-base); }
+.modal-close{ width: var(--h-base); height: var(--h-base); }
+
+/* ---------- 用户端与拼团主按钮字号 ---------- */
+.jd-button,
+.jd-home-buy .jd-button,
+.jd-home-state button,
+.jd-hero-actions .jd-button,
+.jd-storefront .jd-checkout-bar .jd-button,
+.gp-button{ font-size: var(--fs-body); }
+.poster-state button, .poster-actions a, .poster-actions button, .poster-link-row button{ font-size: var(--fs-body); }
+
+/* ---------- 表单控件字号 ---------- */
+.field input, .field select, .field textarea{ font-size: var(--fs-control); }
+
+/* ---------- 标题层级 ---------- */
+.admin-layout .page-heading h1{ font-size: var(--fs-page); }
+.admin-layout .panel-header h2,
+.admin-layout .modal h2,
+.admin-layout .drawer-header h2,
+.admin-layout .admin-modal-heading h2{ font-size: var(--fs-panel); }
+.admin-layout .capture-group-head h2{ font-size: var(--fs-subtitle); }
+.admin-layout .metric-card strong{ font-size: var(--fs-page); }
+
+/* ---------- 卡片头垂直居中：标题与右侧按钮同一中线 ---------- */
+.admin-layout .panel-header{ align-items: center; }
+.admin-layout .panel-header h2{ margin: 0; }
+
+/* ---------- 桌面主按钮不再放大：高度由文末 PC/移动两套媒体块统一钉死 ---------- */
+
+/* ---------- 移动端：触摸目标不低于 44px，文字按钮也要点得到 ---------- */
+@media (max-width: 760px) {
+  .button, .admin-layout .button, .admin-layout .filter-button,
+  .admin-layout .heading-actions .button, .admin-layout .panel-header .button,
+  .modal-close, .icon-button,
+.poster-state button, .poster-actions a, .poster-actions button, .poster-link-row button{ min-height: 44px; }
+.admin-layout .field input, .admin-layout .field select, .admin-layout .field textarea{ height: 44px; }
+.admin-layout .chip, .admin-layout .radio-row .chip{ min-height: 44px; }
+.admin-layout .admin-batch-select{ height: 44px; }
+.admin-layout .small-link, .admin-layout .text-action{ min-height: 44px; align-items: center; }
+.admin-layout .metric-card strong{ font-size: 20px; }
+}
+
+/* ---------- 顶栏全站同高 ----------
+   选购页曾把 header 压到 56px 并缩小品牌，导致切换「当季鲜蟹 / 挑选好蟹」时
+   顶栏高度和品牌大小跳变。现在顶栏全站统一（桌面 72px / 移动 64px），
+   不再针对 checkout 单独压缩。 */
+
+/* ---------- 用户端页脚：留在文档流中，长页随正文滚动，短页自然贴底 ----------
+   所有页面共用这一套规则，不固定定位、不设 z-index；边线与顶栏同宽，文字与品牌对齐。 */
+.jd-storefront{ min-height: 100dvh; display: flex; flex-direction: column; }
+.jd-storefront > main{ flex: 1 1 auto; }
+.jd-storefront > .jd-header{ flex-shrink: 0; }
+.jd-storefront > .jd-footer{
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 24px auto 0;
+  padding: 18px 32px calc(18px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--jd-line);
+  color: var(--jd-muted);
+  font-size: var(--fs-hint);
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.jd-footer > span:first-child{
+  color: var(--jd-ink);
+  font-family: var(--jd-serif);
+  font-size: var(--fs-body);
+  white-space: nowrap;
+}
+.jd-success-icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #e4ece2;
+  color: var(--jd-green);
+}
+.jd-template-unavailable{ flex-basis: 100%; color: var(--jd-muted); font-size: var(--fs-hint); line-height: 1.5; }
+@media (max-width: 760px) {
+  .jd-storefront > .jd-footer{
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  .jd-footer > span:last-child{ display: none; }
+}
+@media (max-width: 520px) {
+  .jd-storefront > .jd-footer{
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
+/* ---------- 管理端桌面内容撑满视口 ---------- */
+@media (min-width: 761px) {
+.admin-layout .admin-main{ display: flex; flex-direction: column; min-height: 100dvh; }
+.admin-layout .admin-main > .page-wrap{ flex: 1 1 auto; display: flex; flex-direction: column; }
+.admin-layout .page-wrap > .content-grid{ flex: 1 1 auto; }
+}
+
+/* ---------- 响应式硬伤修复（扫宽度审计查出） ---------- */
+/* 「退出登录」在 768~834px 顶栏空间不足时被折成两行 */
+.admin-layout .top-actions > .button{ white-space: nowrap; }
+
+@media (max-width: 760px) {
+  /* 1) 手机上 metric 卡片仍横排，会把「预计收入」挤成两行 —— 改回上下排 */
+.admin-layout .metric-card{ display: block; }
+.admin-layout .metric-card strong{ margin-top: 4px; }
+.admin-layout .metric-top span{ white-space: nowrap; }
+  /* 3) 320px 下发货卡片比视口宽 18px，会横向溢出 */
+  .admin-layout .order-card,
+  .admin-layout .gesture-card,
+.admin-layout .orders-list{ min-width: 0; max-width: 100%; }
+  /* 收货地址卡片的行内操作按钮在手机上也要点得到 */
+.jd-address-edit, .jd-address-remove{ display: inline-flex; align-items: center; min-height: 44px; }
+.jd-address-actions{ gap: 20px; }
+}
+
+/* 480px 附近顶栏太窄，「我的团购」四个字会被挤出容器（内容 55px > 容器 44px）。
+   与购物车/我的订单的窄屏处理保持一致：只留图标和徽章。 */
+@media (max-width: 520px) {
+.jd-storefront-home .jd-header-account .jd-my-orders.jd-group-entry{
+    width: 44px; min-width: 44px; justify-content: center; gap: 0; padding: 0;
+  }
+.jd-storefront-home .jd-header-account .jd-my-orders.jd-group-entry > span:not(.jd-asset-icon){ display: none; }
+}
+
+/* ---------- 标题加粗：中文衬线在 500 字重下屏幕上偏细，标题统一 700 ---------- */
+.admin-layout .page-heading h1,
+.admin-layout .panel-header h2,
+.admin-layout .capture-group-head h2,
+.admin-layout .modal h2,
+.jd-form-heading h1,
+.jd-my-group-heading h1,
+.jd-login-heading h1,
+.jd-home-heading h1,
+.jd-home-heading h2,
+.jd-bulk-heading h2{ font-weight: 700; }
+
+/* 320px 窄屏：顶部品牌名「江畔蟹事」放不下会被裁掉（实测需要 76px、可用 59px）。
+   注意 login.css 里 `.jd-header:has(.jd-header-account) .jd-brand strong` 有 4 个类级别，
+   这里必须给出同等或更高的特异性才压得住。 */
+@media (max-width: 380px) {
+  .jd-brand strong,
+  .jd-storefront-home .jd-brand strong,
+  .jd-header:has(.jd-header-account) .jd-brand strong,
+.jd-storefront-home .jd-header:has(.jd-header-account) .jd-brand strong{
+    font-size: 14px; letter-spacing: -.02em; white-space: nowrap;
+  }
+}
+
+/* ---------- 购买须知横幅不许撑破横向 ----------
+   desktop.css（在 storefront.css 之后加载）给了它 max-width:1304px，checkout 模式
+   还加了 white-space:nowrap，长文案会把整页撑出横向滚动条（768px 实测溢出 339px）。
+   这类覆盖必须写在最后加载的统一层里才压得住。 */
+.jd-notice{ max-width: 100%; }
+.jd-notice > span{ flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.jd-storefront:has(.jd-checkout) .jd-notice{ white-space: normal; max-width: 100%; }
+
+/* ==================== 控件高度：PC / 移动各一套标准，各自内部必须统一 ====================
+   实测乱象：PC 首页一个页面就有 70/58/55/44/42/40/36 七种按钮高度。
+   规则：① 交互控件的高度一律由 height 钉死，padding 不再参与撑高；
+        ② PC 一套（鼠标，控件小巧，"比字大一圈"）、移动端一套（手指，够大）；
+        ③ 版式大块（品牌、顶部导航）和多行控件（textarea、两行选项、开关）豁免。 */
+@media (min-width: 761px) {
+  /* PC 标准控件 */
+  button:not(.toggle):not(.jd-mini-option):not(.jd-brand):not(.jd-skip-link):not(.jd-login-entry):not(.jd-my-orders):not(.contact-copy),
+  input:not([type='radio']):not([type='checkbox']):not([type='file']),
+select{
+    box-sizing: border-box;
+    height: 32px;
+    min-height: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* 海报弹层「保存图片」是锚点，不在上面的元素兜底范围内；
+     同行按钮已被钉成 32px，它必须同高，否则 PC 上操作行错位。 */
+.poster-actions a{ box-sizing: border-box; height: 32px; min-height: 32px; padding-top: 0; padding-bottom: 0; }
+
+  /* 我的团购卡片操作行：「查看团购」是 <a class="jd-button-plain">，不在上面 button 兜底范围内，
+     实测 PC 上同行 44px(a) 与 32px(button) 并存。a 和 button 一起钉死，保证同一行等高。 */
+  .jd-my-group-actions > .jd-button-plain{ box-sizing: border-box; height: 32px; min-height: 32px; }
+
+  /* PC 一律 32px：主次按钮不再区分高度（实测主按钮 36px 会被上面的规则压住，
+     与其留一条不生效的规则，不如全站统一 32px，靠颜色区分主次）。 */
+
+  /* 豁免：版式大块与多行控件不参与控件统一 */
+  .jd-brand,
+.jd-header nav button{ height: auto; min-height: 0; }
+textarea{ height: auto; min-height: 88px; }
+.toggle{ height: auto; min-height: 0; }
+.jd-mini-option{ height: auto; min-height: 44px; }
+}
+
+@media (max-width: 760px) {
+  /* 移动端统一到 44px：手指点得到 */
+  button:not(.toggle):not(.jd-mini-option):not(.jd-brand):not(.jd-skip-link):not(.jd-login-entry):not(.jd-my-orders):not(.contact-copy),
+  input:not([type='radio']):not([type='checkbox']):not([type='file']),
+select{
+    box-sizing: border-box;
+    height: 44px;
+    min-height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* 普通确认弹层的长按钮允许自然增高；固定 44px 会把多地址拼团文案裁掉。 */
+  .modal > .modal-actions > button{
+    height: auto !important;
+    min-height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .jd-brand,
+.jd-header nav button{ height: auto; min-height: 0; }
+textarea{ height: auto; min-height: 88px; }
+.toggle{ height: auto; min-height: 0; }
+.jd-mini-option{ height: auto; min-height: 44px; }
+
+  /* 登录页：提交按钮比通栏控件收一档，避免全宽大按钮显得臃肿 */
+.jd-login-submit{ height: 40px; min-height: 40px; }
+
+  /* 我的团购卡片操作行：a 与 button 一起钉到 44px（同上，PC 块有对应规则） */
+  .jd-my-group-actions > .jd-button-plain{ box-sizing: border-box; height: 44px; min-height: 44px; }
+
+  /* 移动端输入框字号统一 16px：低于 16px 时 iOS Safari 聚焦会把整页放大
+     （拼团页原先 .gp-field input 是 14px，一聚焦就跳）。 */
+  input:not([type='radio']):not([type='checkbox']):not([type='file']),
+  select,
+textarea{ font-size: 16px; }
+}
+
+/* ---------- PC 端留白：内容区收窄、间距拉开、行高收一档 ----------
+   此前为了「撑满视口」把内容铺到 1304px 且行高 1.75，视觉上又满又散。
+   撑满不等于铺满：内容区收窄居中，页脚靠 margin-top:auto 贴底即可。 */
+@media (min-width: 761px) {
+.jd-storefront-home main{ min-height: 0; }
+/* 页面骨架统一宽度（2026-09-20 用户反馈「PC 端头小身子大、logo 应该往左靠」）
+   根因：顶栏(1160) / 主体(1180) / 页脚(912) 各写各的 max-width，而且都没写 width:100%
+   —— 在 .jd-storefront 这个 flex column 里，auto margin 会让它们被「内容」撑开，
+   于是顶栏只有 813px（被 logo+导航撑开）、页脚只有 912px。三者宽度和左边缘全不一致。
+   统一到 1080px（= 首页价目表的宽度）：三者同宽、左边缘对齐，视觉上整体收在中间。 */
+.jd-storefront > .jd-header,
+.jd-storefront > main,
+.jd-storefront > .jd-footer,
+.jd-storefront .jd-checkout{ width: 100%; max-width: 1080px; margin-left: auto; margin-right: auto; }
+.jd-home-price-list{ line-height: 1.6; }
+.jd-home-points{ margin-bottom: 36px; }
+.jd-home-story{ margin-top: 42px; }
+.jd-home-heading{ margin-top: 4px; }
+}
+
+/* ---------- 折叠的 <details> 内容必须不参与布局 ----------
+   实测：本项目里 details 折叠时（open=false），内部 <p> 仍生成 box（display:block、
+   有实际 rect），位置与页脚完全重合，被判为压线。这里显式恢复标准行为。 */
+details:not([open]) > *:not(summary){ display: none; }

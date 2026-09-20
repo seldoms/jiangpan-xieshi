@@ -1,0 +1,137 @@
+[
+  {
+    "id": "A01",
+    "name": "首页横幅",
+    "key": "banner",
+    "source": "1.png",
+    "sourceRect": {
+      "x": 12,
+      "y": 16,
+      "width": 1060,
+      "height": 606
+    },
+    "src": "/assets/jiangdu-v1/banner.webp",
+    "width": 1060,
+    "height": 606
+  },
+  {
+    "id": "A02",
+    "name": "苏北蟹塘风光",
+    "key": "pond",
+    "source": "1.png",
+    "sourceRect": {
+      "x": 1092,
+      "y": 352,
+      "width": 554,
+      "height": 264
+    },
+    "src": "/assets/jiangdu-v1/pond.webp",
+    "width": 554,
+    "height": 264
+  },
+  {
+    "id": "B01",
+    "name": "活公蟹",
+    "key": "male",
+    "source": "2.png",
+    "sourceRect": {
+      "x": 16,
+      "y": 48,
+      "width": 528,
+      "height": 368
+    },
+    "src": "/assets/jiangdu-v1/male.webp",
+    "width": 576,
+    "height": 576
+  },
+  {
+    "id": "B02",
+    "name": "活母蟹",
+    "key": "female",
+    "source": "2.png",
+    "sourceRect": {
+      "x": 572,
+      "y": 58,
+      "width": 518,
+      "height": 358
+    },
+    "src": "/assets/jiangdu-v1/female.webp",
+    "width": 576,
+    "height": 576
+  },
+  {
+    "id": "B03",
+    "name": "公母双蟹套装",
+    "key": "pair",
+    "source": "2.png",
+    "sourceRect": {
+      "x": 1110,
+      "y": 44,
+      "width": 546,
+      "height": 376
+    },
+    "src": "/assets/jiangdu-v1/pair.webp",
+    "width": 576,
+    "height": 576
+  },
+  {
+    "id": "B04",
+    "name": "开启礼盒",
+    "key": "gift-open",
+    "source": "2.png",
+    "sourceRect": {
+      "x": 12,
+      "y": 432,
+      "width": 536,
+      "height": 486
+    },
+    "src": "/assets/jiangdu-v1/gift-open.webp",
+    "width": 576,
+    "height": 576
+  },
+  {
+    "id": "C03",
+    "name": "闭合礼盒",
+    "key": "gift-closed",
+    "source": "2.png",
+    "sourceRect": {
+      "x": 564,
+      "y": 478,
+      "width": 532,
+      "height": 404
+    },
+    "src": "/assets/jiangdu-v1/gift-closed.webp",
+    "width": 576,
+    "height": 576
+  },
+  {
+    "id": "C02",
+    "name": "普通运输包装",
+    "key": "package-plain",
+    "source": "2.png",
+    "sourceRect": {
+      "x": 1110,
+      "y": 444,
+      "width": 544,
+      "height": 466
+    },
+    "src": "/assets/jiangdu-v1/package-plain.webp",
+    "width": 576,
+    "height": 576
+  },
+  {
+    "id": "C01",
+    "name": "蟹形品牌标志",
+    "key": "logo",
+    "source": "1.png",
+    "sourceRect": {
+      "x": 1208,
+      "y": 64,
+      "width": 296,
+      "height": 266
+    },
+    "src": "/assets/jiangdu-v1/logo.png",
+    "width": 256,
+    "height": 256
+  }
+]
