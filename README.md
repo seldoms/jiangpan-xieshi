@@ -15,7 +15,7 @@
 [![SQLite](https://img.shields.io/badge/SQLite-自托管-B85A3D?style=flat-square)](server/src/db.js)
 [![Baseline](https://img.shields.io/badge/基线-2026.09.21-B85A3D?style=flat-square)](docs/baseline.md)
 
-[为什么做](#从一句给我留两盒开始) · [能做什么](#朋友下单你来安排好这一批) · [跑起来](#本地跑起来) · [开发文档](docs/README.md)
+[为什么做](#从一句给我留两盒开始) · [能做什么](#朋友下单你来安排好这一批) · [如何部署](#一台-vps一个域名就是自己的小店) · [本地体验](#本地跑起来) · [开发文档](docs/README.md)
 
 </div>
 
@@ -78,6 +78,25 @@
 - 生产部署需要自行配置 HTTPS、强管理员凭据、备份与监控。
 
 </details>
+
+## 一台 VPS，一个域名，就是自己的小店
+
+**推荐自托管：一台 Linux VPS + 一个域名 + HTTPS。** 前端、后端和 SQLite 数据库放在同一台服务器，朋友通过你的域名打开网页即可下单，无需单独购买数据库服务。
+
+```mermaid
+flowchart LR
+    A[朋友打开店铺域名] -->|HTTPS| B[VPS · HTTPS 入口]
+    B --> C[nginx · 店铺页面]
+    C -->|/api| D[Node.js · 订单服务]
+    D --> E[(SQLite · 订单数据)]
+```
+
+- **准备服务器**：有 SSH 管理权限的 Linux VPS，安装 Node.js 22 LTS、nginx 和 SQLite 工具。
+- **绑定域名**：将域名解析到 VPS，配置 HTTPS 证书与自动续期；店铺与拼团海报会使用当前访问域名生成链接。
+- **保存好数据**：订单库独立于应用代码存放，定时备份，并另存一份到服务器之外。
+- **日常维护**：配置管理员凭据，关注服务存活、磁盘空间和备份结果。主要持续成本是 VPS 与域名。
+
+完整步骤见 [VPS 部署手册](deploy/README.md)。这是一套自己掌握代码和数据的小店，需要部署者负责服务器运维。
 
 ## 本地跑起来
 

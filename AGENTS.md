@@ -167,3 +167,5 @@ cd /opt/crabshop/server && DATABASE_PATH=/opt/crabshop/data/app.db /usr/bin/node
 - README 配图位于 `docs/showcase/`，它们是介绍图，不替代真实浏览器验收。
 - 演示脚本显式要求 `ADMIN_CODE` 环境变量。不得把实际管理员下单码、生产域名与收货信息写入文档、测试或提交历史。
 - 公开基线与内部运行仓库历史独立，不得强推内部旧历史覆盖本仓库。
+
+- 推荐自托管方案为一台 Linux VPS + 域名 + HTTPS；前端、后端、SQLite 同机，数据库与代码目录分离，备份须另存异机。对外介绍见 README，部署拓扑与步骤见 `deploy/README.md`。
